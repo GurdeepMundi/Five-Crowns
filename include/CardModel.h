@@ -11,8 +11,9 @@
 
 class CardModel {
  public:
+   // Sahil is working on this
   void getScoreValue(score:int);
-
+  // Sahil is working on this
   int getScoreValue();
 
   void setRank(rank:int);
