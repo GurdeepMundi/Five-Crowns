@@ -9,7 +9,7 @@
 
 #include <iostream>
 
-enum Suit {CLUBS, HEARTS, SPADES, DIAMONDS, STARS};
+enum Suits {CLUBS, HEARTS, SPADES, DIAMONDS, STARS};
 
 class CardModel {
  public:
@@ -18,15 +18,15 @@ class CardModel {
   // Sahil is working on this
   int getScoreValue();
 
-  void setRank(int rank);
+  void setRank(int r);
   // Muhammad
-  void setSuit(Suit s);
+  void setSuit(Suits s);
   // Muhammad
  private:
 int rank;
 int scoreValue;
 bool isWild;
-Suit suits;
+Suits suit;
 
 };
 #endif

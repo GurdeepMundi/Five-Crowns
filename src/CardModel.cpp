@@ -14,10 +14,10 @@ int Card::getScoreValue() {
   // code here
 }
 
-void Card::setRank(int rank) {
-  // code here
+void Card::setRank(int r) {
+  rank = r
 }
 
-void Card::setSuit(suit S) {
-  // code here
+void Card::setSuit(Suits s) {
+  suit = s
 }
