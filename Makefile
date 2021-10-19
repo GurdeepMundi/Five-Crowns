@@ -15,6 +15,8 @@ STATIC_ANALYSIS = cppcheck
 
 STYLE_CHECK = cpplint.py
 
+DOXY_DIR = docs/code
+
 STATIC_RESULTS = CppCheckResults.xml
 
 BROWSER = firefox
@@ -43,4 +45,4 @@ style: ${SRC_INCLUDE} ${SRC_DIR}
 	${STYLE_CHECK} $(SRC_INCLUDE)/* ${SRC_DIR}/*
 
 docs: ${SRC_INCLUDE}
-	doxyfile
+	doxygen $(DOXY_DIR)/doxyfile
