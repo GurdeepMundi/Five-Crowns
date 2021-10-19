@@ -15,9 +15,9 @@ int Card::getScoreValue() {
 }
 
 void Card::setRank(int r) {
-  rank = r
+  this->rank = r
 }
 
 void Card::setSuit(Suits s) {
-  suit = s
+  this->suit = s
 }
