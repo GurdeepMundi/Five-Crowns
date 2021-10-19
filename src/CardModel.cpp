@@ -4,7 +4,7 @@
 * File: CardModel.cpp
 * Date Created: 16/10/2021
 */
-#include "./include/CardModel.h"
+#include "../include/CardModel.h"
 
 void Card::setScoreValue(int scoreValue) {
   this->scoreValue = scoreValue;
