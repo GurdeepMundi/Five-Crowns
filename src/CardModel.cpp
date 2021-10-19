@@ -11,7 +11,7 @@ void Card::setScoreValue(int scoreValue) {
 }
 
 int Card::getScoreValue() {
-  return this->score;
+  return this->scoreValue;
 }
 
 void Card::setRank(int r) {
