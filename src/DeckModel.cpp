@@ -5,7 +5,6 @@
 * Date Created: 16/10/2021
 */
 #include <DeckModel.h>
-#include <vector>
 DeckModel::DeckModel() {
   //constructor
 }
@@ -27,14 +26,14 @@ vector<int> numbers;
     }*/
 
 void DeckModel::shuffle() {
-  /*vector <CardModel*> buffer;
+  vector <CardModel*> buffer;
   srand(deck.at(1));
   for(int i = 0; i < deck.size(); i++) {
     //insert this element at a random location in buffer
     buffer.insert(buffer.begin() + (rand()%buffer.size()), deck.at(i));
-  }*/
-}
+  }
+}*/
 
-void DeckModel::addCard(CardModel* c) {
+void DeckModel::addcard(CardModel* c) {
   deck.push_back(c);
 }
