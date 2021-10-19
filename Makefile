@@ -43,4 +43,4 @@ style: ${SRC_INCLUDE} ${SRC_DIR}
 	${STYLE_CHECK} $(SRC_INCLUDE)/* ${SRC_DIR}/*
 
 docs: ${SRC_INCLUDE}
-	doxygen
+	doxyfile
