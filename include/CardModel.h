@@ -14,7 +14,7 @@ enum Suits {CLUBS, HEARTS, SPADES, DIAMONDS, STARS};
 class CardModel {
  public:
    // Sahil is working on this
-  void setScoreValue(int score);
+  void setScoreValue(int scoreValue);
   // Sahil is working on this
   int getScoreValue();
 

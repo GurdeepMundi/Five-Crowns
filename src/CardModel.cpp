@@ -6,8 +6,8 @@
 */
 #include "./include/CardModel.h"
 
-void Card::setScoreValue(int score) {
-  this->score = score;
+void Card::setScoreValue(int scoreValue) {
+  this->scoreValue = scoreValue;
 }
 
 int Card::getScoreValue() {
