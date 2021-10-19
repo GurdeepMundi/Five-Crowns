@@ -7,7 +7,7 @@
 #include "./include/CardModel.h"
 
 void Card::setScoreValue(int score) {
-  this-> score = score;
+  this->score = score;
 }
 
 int Card::getScoreValue() {
