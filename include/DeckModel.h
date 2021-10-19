@@ -17,3 +17,4 @@ public:
 private:
   vector <CardModel*> deck;
 };
+#endif
