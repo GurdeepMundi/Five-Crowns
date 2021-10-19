@@ -15,6 +15,6 @@ public:
   void shuffle();
   void addCard(CardModel* c);
 private:
-  vector <CardModel*> deck;
+std::vector <CardModel*> deck;
 };
 #endif
