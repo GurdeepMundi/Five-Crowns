@@ -4,3 +4,9 @@
 * File: UserModel.cpp
 * Date Created: 16/10/2021
 */
+
+#include "UserModel.h"
+
+void UserModel::help() {
+  // code here
+}
