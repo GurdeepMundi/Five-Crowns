@@ -35,6 +35,6 @@ void DeckModel::shuffle() {
   }*/
 }
 
-void DeckModel::addcard(CardModel* c) {
+void DeckModel::addCard(CardModel* c) {
   deck.push_back(c);
 }
