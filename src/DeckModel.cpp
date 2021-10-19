@@ -27,12 +27,12 @@ vector<int> numbers;
     }*/
 
 void DeckModel::shuffle() {
-  vector <CardModel*> buffer;
+  /*vector <CardModel*> buffer;
   srand(deck.at(1));
   for(int i = 0; i < deck.size(); i++) {
     //insert this element at a random location in buffer
     buffer.insert(buffer.begin() + (rand()%buffer.size()), deck.at(i));
-  }
+  }*/
 }
 
 void DeckModel::addcard(CardModel* c) {
