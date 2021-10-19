@@ -6,18 +6,18 @@
 */
 #include "CardModel.h"
 
-void Card::setScoreValue(int scoreValue) {
+void CardModel::setScoreValue(int scoreValue) {
   this->scoreValue = scoreValue;
 }
 
-int Card::getScoreValue() {
+int CardModel::getScoreValue() {
   return this->scoreValue;
 }
 
-void Card::setRank(int r) {
+void CardModel::setRank(int r) {
   this->rank = r;
 }
 
-void Card::setSuit(Suits s) {
+void CardModel::setSuit(Suits s) {
   this->suit = s;
 }
