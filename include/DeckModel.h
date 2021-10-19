@@ -8,6 +8,7 @@
 #define DECKMODEL_H
 #include <CardModel.h>
 #include <vector.h>
+#include <cstdlib>
 Class DeckModel {
 public:
   DeckModel();
