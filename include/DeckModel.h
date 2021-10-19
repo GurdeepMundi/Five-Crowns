@@ -6,3 +6,13 @@
 */
 #ifndef DECKMODEL_H
 #define DECKMODEL_H
+#include <CardModel.h>
+#include <vector.h>
+Class DeckModel {
+public:
+  DeckModel();
+  void shuffle();
+  void addCard(CardModel* c);
+private:
+  vector <CardModel*> deck;
+};
