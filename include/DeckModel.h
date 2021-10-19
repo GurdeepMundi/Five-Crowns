@@ -7,7 +7,7 @@
 #ifndef DECKMODEL_H
 #define DECKMODEL_H
 #include <CardModel.h>
-#include <vector.h>
+#include <vector>
 #include <cstdlib>
 Class DeckModel {
 public:
