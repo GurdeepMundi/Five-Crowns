@@ -9,7 +9,7 @@
 #include <CardModel.h>
 #include <vector>
 #include <cstdlib>
-Class DeckModel {
+class DeckModel {
 public:
   DeckModel();
   void shuffle();
