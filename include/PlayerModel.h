@@ -15,6 +15,7 @@ Class PlayerModel {
 public:
   void PlayerModel::setName(std::string n);
   std::string PlayerModel::getname();
+  virtual void PlayerModel::discard(int d);
   void PlayerModel::draw();
   // void PlayerModel::sort();
   std::vector<CardModel*> PlayerModel::makeRun();
