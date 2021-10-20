@@ -15,7 +15,7 @@ class PlayerModel {
 public:
   void setName(std::string n);
   std::string getname();
-  virtual void discard(int d);
+  virtual void discard(int d) = 0;
   void draw();
   // void PlayerModel::sort();
   std::vector<CardModel*> makeRun();

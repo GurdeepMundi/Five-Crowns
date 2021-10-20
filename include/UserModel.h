@@ -9,5 +9,6 @@
 #include <PlayerModel.h>
 class UserModel: public PlayerModel {
   void help();
+  void discard(int d);
 };
 #endif

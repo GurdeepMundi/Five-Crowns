@@ -10,3 +10,7 @@
 void UserModel::help() {
   // code here
 }
+
+void UserModel::discard(int d) {
+  // code here
+}
