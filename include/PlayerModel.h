@@ -13,18 +13,18 @@
 
 class PlayerModel {
 public:
-  void PlayerModel::setName(std::string n);
-  std::string PlayerModel::getname();
-  virtual void PlayerModel::discard(int d);
-  void PlayerModel::draw();
+  void setName(std::string n);
+  std::string getname();
+  virtual void discard(int d);
+  void draw();
   // void PlayerModel::sort();
-  std::vector<CardModel*> PlayerModel::makeRun();
-  std::vector<CardModel*> PlayerModel::makeBook();
+  std::vector<CardModel*> makeRun();
+  std::vector<CardModel*> makeBook();
 
 private:
   std::vector<CardModel*> hand;
   int score;
   std::string name;
-}
+};
 
 #endif
