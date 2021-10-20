@@ -17,7 +17,7 @@ std::string PlayerModel::getname() {
   return this->name;
 }
 
-virtual void PlayerModel::discard(int d) {
+void PlayerModel::discard(int d) {
   // code here
 }
 
