@@ -11,7 +11,7 @@
 #include <string>
 #include <vector>
 
-Class PlayerModel {
+class PlayerModel {
 public:
   void PlayerModel::setName(std::string n);
   std::string PlayerModel::getname();

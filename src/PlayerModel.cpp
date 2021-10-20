@@ -4,8 +4,8 @@
 * File: PlayerModel.cpp
 * Date Created: 16/10/2021
 */
-#include "PlayerModel.h"
-#include "CardModel.h"
+#include <PlayerModel.h>
+#include <CardModel.h>
 #include <string>
 #include <vector>
 
