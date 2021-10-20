@@ -6,5 +6,7 @@
 */
 #ifndef AIMODEL_H
 #define AIMODEL_H
-
+class AIModel: public PlayerModel {
+  void discard();
+};
 #endif
