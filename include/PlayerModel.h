@@ -12,7 +12,7 @@
 #include <vector>
 
 class PlayerModel {
-public:
+ public:
   void setName(std::string n);
   std::string getname();
   virtual void discard(int d) = 0;
@@ -21,7 +21,7 @@ public:
   std::vector<CardModel*> makeRun();
   std::vector<CardModel*> makeBook();
 
-private:
+ private:
   std::vector<CardModel*> hand;
   int score;
   std::string name;

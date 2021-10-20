@@ -12,11 +12,11 @@
 #include <iostream>
 
 class DeckModel {
-public:
+ public:
   DeckModel();
   void shuffle();
   void addCard(CardModel* c);
-private:
+ private:
 std::vector <CardModel*> deck;
 };
 #endif

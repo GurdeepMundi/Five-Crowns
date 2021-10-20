@@ -13,7 +13,7 @@ enum Suits {CLUBS, HEARTS, SPADES, DIAMONDS, STARS};
 
 class CardModel {
  public:
-   // Sahil is working on this
+  // Sahil is working on this
   void setScoreValue(int scoreValue);
   // Sahil is working on this
   int getScoreValue();
@@ -27,6 +27,5 @@ int rank;
 int scoreValue;
 bool isWild;
 Suits suit;
-
 };
 #endif
