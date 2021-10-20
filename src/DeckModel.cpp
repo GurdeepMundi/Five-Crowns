@@ -31,8 +31,8 @@ void DeckModel::shuffle() {
   for(int i = 0; i < deck.size(); i++) {
     //insert this element at a random location in buffer
     buffer.insert(buffer.begin() + (rand()%buffer.size()), deck.at(i));
-  }
-}*/
+  }*/
+}
 
 void DeckModel::addCard(CardModel* c) {
   deck.push_back(c);

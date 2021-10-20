@@ -26,3 +26,5 @@ private:
   int score;
   std::string name;
 }
+
+#endif
