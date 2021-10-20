@@ -7,7 +7,7 @@
 #ifndef PLAYERMODEL_H
 #define PLAYERMODEL_H
 
-#include "CardModel"
+#include <CardModel.h>
 #include <string>
 #include <vector>
 
