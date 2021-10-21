@@ -25,7 +25,7 @@ class DeckModel {
   /**this function can be used to remove a card from the deck
   *@param c the card to be removed
   */
-  void removeCard(CardModel* c);
+  void removeCard(int p);
  private:
 std::vector <CardModel*> deck;///will be used to store all the cards
 };
