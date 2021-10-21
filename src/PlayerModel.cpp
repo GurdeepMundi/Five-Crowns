@@ -27,9 +27,8 @@ void PlayerModel::discard(int d) {
 // }
 
 void PlayerModel::draw(<CardModel*>deck) {
-  // code here
-  // get the top of the draw pile so pop from the deck
-  // put it in the players hand
+  hand.push_back(deck->deck.back());
+  deck->deck.pop_back();
 }
 
 std::vector<CardModel*> PlayerModel::makeRun() {
