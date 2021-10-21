@@ -27,13 +27,13 @@ vector<int> numbers;
     }*/
 
 void DeckModel::shuffle() {
-  vector <CardModel*> buffer;
+  std::vector <CardModel*> buffer;
   int insertPosition;
   srand(time(0));
   for(int i = 0; i < deck.size(); i++) {
     insertPosition = rand()%(buffer.size() == 0)? 1: buffer.size();
     //insert this element at a random location in buffer
-    buffer.insert(buffer.begin() + , deck.at(i));
+    buffer.insert(buffer.begin() + insertPosition, deck.at(i));
   }
   deck = buffer;
 }
