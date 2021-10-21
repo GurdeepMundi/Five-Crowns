@@ -26,7 +26,7 @@ void PlayerModel::discard(int d) {
 //  // code here
 // }
 
-void PlayerModel::draw() {
+void PlayerModel::draw(CardModel<deck>) {
   // code here
   // get the top of the draw pile so pop from the deck
   // put it in the players hand
