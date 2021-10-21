@@ -31,7 +31,6 @@ void PlayerModel::draw() {
   // get the top of the draw pile so pop from the deck
   // put it in the players hand
 //  deck.pop_front();
-  this->hand = deck.at(0);
 
 }
 
