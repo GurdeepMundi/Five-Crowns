@@ -45,7 +45,7 @@ class PlayerModel {
   /**
   *@ Vector to store information about the players hand
   */
-  std::vector<CardModel*> hand;
+  DeckModel hand;
   /**
   *@ variable score is used to track accumulated score
   */
