@@ -29,7 +29,7 @@ class PlayerModel {
   virtual void discard(int d) = 0;
   /**This function is used to draw a card from the draw pile
   */
-  void draw(CardModel<deck>);
+  void draw(<CardModel*>deck);
   /** sort function might not be implemented
   *void sort();
   *This function lets the user make a run (lay 3 or more consecutive cards
