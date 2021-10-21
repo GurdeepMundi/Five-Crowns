@@ -8,6 +8,7 @@
 #include <CardModel.h>
 #include <string>
 #include <vector>
+#include "DeckModel.h"
 
 void PlayerModel::setName(std::string n) {
   this->name = n;
