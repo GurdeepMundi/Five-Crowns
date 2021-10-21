@@ -31,7 +31,7 @@ void DeckModel::shuffle() {
   int insertPosition;
   srand(time(0));
   for (int i = 0; i < deck.size(); i++) {
-    insertPosition = rand(buffer.size())%(buffer.size() == 0)? 1: buffer.size();
+    insertPosition = rand()%(buffer.size() == 0)? 1: buffer.size();
     //insert this element at a random location in buffer
     buffer.insert(buffer.begin() + insertPosition, deck.at(i));
   }
