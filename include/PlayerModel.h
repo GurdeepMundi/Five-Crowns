@@ -41,7 +41,10 @@ class PlayerModel {
   std::vector<CardModel*> makeBook();
 
  private:
-  std::vector<CardModel*> hand;///player's hand
+   /**
+   *@ Vector to store information about the players hand 
+   */
+  std::vector<CardModel*> hand;
   int score;///accumulated score
   std::string name;///name of the player
 };
