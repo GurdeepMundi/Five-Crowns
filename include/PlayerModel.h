@@ -15,9 +15,9 @@
 */
 class PlayerModel {
  public:
-   /**This function sets the name of the player
-   *@param n this will be the player's name
-   */
+  /**This function sets the name of the player
+  *@param n this will be the player's name
+  */
   void setName(std::string n);
   /**This function can be used to get the player's name
   */
@@ -30,9 +30,9 @@ class PlayerModel {
   /**This function is used to draw a card from the draw pile
   */
   void draw();
-  // sort function might not be implemented
-  // void sort();
-  /**This function lets the user make a run (lay 3 or more consecutive cards
+  /** sort function might not be implemented
+  *void sort();
+  *This function lets the user make a run (lay 3 or more consecutive cards
   *from same suit)
   */
   std::vector<CardModel*> makeRun();
@@ -41,9 +41,9 @@ class PlayerModel {
   std::vector<CardModel*> makeBook();
 
  private:
-   /**
-   *@ Vector to store information about the players hand
-   */
+  /**
+  *@ Vector to store information about the players hand
+  */
   std::vector<CardModel*> hand;
   /**
   *@ variable score is used to track accumulated score
