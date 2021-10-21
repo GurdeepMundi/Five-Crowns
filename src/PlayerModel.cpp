@@ -27,8 +27,8 @@ void PlayerModel::discard(int d) {
 // }
 
 void PlayerModel::draw() {
-  hand.push_back(this deck->deck.back());
-  this deck->deck.pop_back();
+//  hand.push_back(this deck->deck.back());
+  //this deck->deck.pop_back();
 }
 
 std::vector<CardModel*> PlayerModel::makeRun() {
