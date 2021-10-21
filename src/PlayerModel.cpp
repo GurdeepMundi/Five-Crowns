@@ -19,7 +19,12 @@ std::string PlayerModel::getname() {
 }
 
 void PlayerModel::discard(int d) {
-  // code here
+  for (int i = d-1; i < (hand.size()); i++) {
+    hand[i] = hand[i+1];
+  }
+  hand.pop_back();
+
+//  hand.erase(hand.begin() + d);
 }
 
 // void PlayerModel::sort() {
