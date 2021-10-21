@@ -30,8 +30,6 @@ void PlayerModel::draw() {
   // code here
   // get the top of the draw pile so pop from the deck
   // put it in the players hand
-  PlayerModel card = deck.at(0);
-  deck.erase(deck.begin(), deck.begin() + 1);
 }
 
 std::vector<CardModel*> PlayerModel::makeRun() {
