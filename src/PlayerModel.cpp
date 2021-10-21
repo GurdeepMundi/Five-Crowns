@@ -26,7 +26,7 @@ void PlayerModel::discard(int d) {
 //  // code here
 // }
 
-void PlayerModel::draw(<CardModel*>deck) {
+void PlayerModel::draw() {
   hand.push_back(deck->deck.back());
   deck->deck.pop_back();
 }
