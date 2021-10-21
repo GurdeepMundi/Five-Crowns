@@ -42,10 +42,16 @@ class PlayerModel {
 
  private:
    /**
-   *@ Vector to store information about the players hand 
+   *@ Vector to store information about the players hand
    */
   std::vector<CardModel*> hand;
-  int score;///accumulated score
+  /**
+  *@ variable score is used to track accumulated score
+  */
+  int score;
+  /**
+  *@ string to store the name of the player
+  */
   std::string name;///name of the player
 };
 
