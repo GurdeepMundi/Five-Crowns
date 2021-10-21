@@ -30,7 +30,7 @@ void PlayerModel::draw() {
   // code here
   // get the top of the draw pile so pop from the deck
   // put it in the players hand
-  Card card = deck.at(0);
+  PlayerModel card = deck.at(0);
   deck.erase(deck.begin(), deck.begin() + 1);
 }
 
