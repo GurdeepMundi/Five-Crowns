@@ -10,6 +10,7 @@
 #include <CardModel.h>
 #include <string>
 #include <vector>
+#include <DeckModel.h>
 /***
 *this is the parent class of all of the players
 */
