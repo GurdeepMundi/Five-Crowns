@@ -8,7 +8,6 @@
 #define DECKMODEL_H
 #include <CardModel.h>
 #include <vector>
-#include <cstdlib>
 #include <iostream>
 #include <ctime>
 
