@@ -5,6 +5,7 @@
 * Date Created: 16/10/2021
 */
 #include <InterfaceUI.h>
+#include <string>
 
 std::string InterfaceUI::askForUserName() {
   std::string UserName;
