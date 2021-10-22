@@ -12,9 +12,9 @@ void FiveCrownsController::setUpGame() {}
 void dealCards() {}
 
 void callHelp() {
-  help();
+  UserModel.help();
 }
 
 FiveCrownsController::PlayRound(int roundNumber) {}
 
-void FiveCrownsController:: calcScore() {}
+void FiveCrownsController::calcScore() {}
