@@ -6,4 +6,18 @@
 */
 #ifndef INTERFACEUI_H
 #define INTERFACEUI_H
+
+#include<iostream>
+#include <string>
+#include <FiveCrownsController.h>
+
+class InterfaceUI {
+ public:
+   std:: string askForUserName();
+   void WelcomeMessage();
+   void askChoice();
+   void displayMenu();
+   void displayState();
+   void byeMessage();
+};
 #endif
