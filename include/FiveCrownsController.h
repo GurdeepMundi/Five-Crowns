@@ -10,6 +10,7 @@
 #include <iostream>
 #include <vector>
 #include <PlayerModel.h>
+#include <UserModel.h>
 
 class FiveCrownsController {
  public:
