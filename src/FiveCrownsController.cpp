@@ -7,7 +7,7 @@
 #include <FiveCrownsController.h>
 
 void FiveCrownsController::endGame() {
-//exit(0)
+exit(0);
 }
 
 void FiveCrownsController::setUpGame() {}
