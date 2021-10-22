@@ -5,7 +5,9 @@
 * Date Created: 16/10/2021
 */
 
-void FiveCrownsController::endGame() {}
+void FiveCrownsController::endGame() {
+  exit(0);
+}
 
 void FiveCrownsController::setUpGame() {}
 
