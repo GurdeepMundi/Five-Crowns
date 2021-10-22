@@ -10,35 +10,6 @@
 DeckModel::DeckModel() {
   //constructor
 }
-/* need some more work here
-vector<int> numbers;
-    srand(time(0));
-    //numbers.insert(numbers.begin() + 0, 2);
-    //cout << numbers.at(0);
-    int rnd;
-    for (int i = 0; i < 10; i++) {
-        rnd = rand()%((numbers.size() == 0)? 1:numbers.size());
-        cout << rnd;
-        numbers.insert(numbers.begin() + rnd, i);
-    }
-    cout<< numbers.at(0);
-    /*
-    for (int i; i < numbers.size(); i++) {
-        cout << numbers.at(i) << endl;
-    }*/
-/*
-    //seed witha real random value, if available
-    std::random_device r;
-    //e1 is our random engine
-    std::default_random_engine e1(r());
-
-    int rnumber;
-    for (int i = 0; i< 10 ; i++) {
-        //giving the range of numbers
-        std::uniform_int_distribution<int> uniform_dist(0, i);
-        rnumber = uniform_dist(e1);
-        std::cout << e1;
-    }*/
 
 void DeckModel::shuffle() {
   std::vector <CardModel*> buffer;
