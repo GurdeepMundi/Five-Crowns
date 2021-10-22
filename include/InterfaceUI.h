@@ -18,7 +18,7 @@ class InterfaceUI {
    */
    std:: string askForUserName();
    /**
-   * This function displays a welcoe Message to the user.
+   * This function displays a welcome Message to the user.
    */
    void WelcomeMessage();
    /**
