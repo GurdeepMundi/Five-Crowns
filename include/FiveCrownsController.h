@@ -9,7 +9,7 @@
 
 #include <iostream>
 #include <vector>
-#include <stdlib.h>
+#include <cstdlib>
 #include <PlayerModel.h>
 #include <UserModel.h>
 
