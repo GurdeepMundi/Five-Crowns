@@ -15,7 +15,9 @@ void FiveCrownsController::setUpGame() {}
 void dealCards() {}
 
 void callHelp() {
-  UserModel::help();
+  //UserModel::help();
+  // Try
+  // UserModel.help();
 }
 
 int FiveCrownsController::PlayRound(int roundNumber) {}
