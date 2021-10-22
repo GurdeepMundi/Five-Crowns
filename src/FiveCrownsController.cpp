@@ -4,3 +4,15 @@
 * File: FiveCrownsController.cpp
 * Date Created: 16/10/2021
 */
+
+void FiveCrownsController::endGame() {}
+
+void FiveCrownsController::setUpGame() {}
+
+void dealCards() {}
+
+void callHelp() {}
+
+FiveCrownsController::PlayRound(int roundNumber) {}
+
+void FiveCrownsController:: calcScore() {}
