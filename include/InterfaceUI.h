@@ -10,6 +10,7 @@
 #include <iostream>
 #include <string>
 #include <FiveCrownsController.h>
+#include <PlayerModel.h>
 
 class InterfaceUI {
  public:

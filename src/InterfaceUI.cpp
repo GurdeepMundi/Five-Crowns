@@ -6,7 +6,13 @@
 */
 #include <InterfaceUI.h>
 
-std::string InterfaceUI::askForUserName() {}
+std::string InterfaceUI::askForUserName() {
+  std::string UserName;
+
+  std::cout << "Please Enter Your Name" << std::endl;
+  std::cin >> UserName;
+  setName(UserName);
+}
 
 void InterfaceUI::WelcomeMessage() {
   std::cout << "Welcome to Five Crowns" << std::endl;
@@ -20,5 +26,5 @@ void InterfaceUI::displayState() {}
 
 void InterfaceUI::byeMessage() {
   // if endgame Function is called display this message
-  std::cout << "Thank you for Playing bye bye" << std::endl;
+  std::cout << "Thank you for Playing  Goodbye" << std::endl;
 }
