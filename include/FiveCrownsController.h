@@ -34,7 +34,7 @@ class FiveCrownsController {
   /** This function is used to play a round in the game.
   * @ param roundNumber is used to keep track of the rounds.
   */
-  PlayRound(int roundNumber);
+  int PlayRound(int roundNumber);
   /** This function is used to calculate score.
   * @ param roundNumber is used and will be taken into consideration
   * when determining the players score.
