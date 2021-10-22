@@ -4,6 +4,7 @@
 * File: FiveCrownsController.cpp
 * Date Created: 16/10/2021
 */
+#include <FiveCrownsController>
 
 void FiveCrownsController::endGame() {
 //exit(0)
