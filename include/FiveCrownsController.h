@@ -13,15 +13,43 @@
 
 class FiveCrownsController {
  public:
+  /**
+  * This function would be called if the user wants to end the game.
+  */
   void endGame();
+  /**
+  * This function is used to setUp/Start the game.
+  */
   void setUpGame();
+  /**
+  * This function is used to dealCards in the game.
+  */
   void dealCards();
+  /**
+  * This function is called when the user requires assitance with the game.
+  */
   void callHelp();
+  /** This function is used to play a round in the game. 
+  * @ param roundNumber is used to keep track of the rounds.
+  */
   PlayRound(int roundNumber);
+  /** This function is used to calculate score.
+  * @ param roundNumber is used and will be taken into consideration
+  * when determining the players score.
+  */
   void calcScore(int roundNumber);
 private:
+  /**
+  * @ param roundNumber is used to keep track of the rounds.
+  */
   int roundNumber;
+  /**
+  * This is a vector of the Playermodel named Players.
+  */
   std::vector<PlayerModel*>Players;
+  /**
+  * This is used for the currentView.
+  */
   currentView: interface_UI*;
 
 };
