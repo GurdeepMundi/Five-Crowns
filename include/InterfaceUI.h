@@ -16,7 +16,7 @@ class InterfaceUI {
    /** This function asks for the user name.
    * @ param string is used as an input for the user name.
    */
-   std:: string askForUserName();
+   std::string askForUserName();
    /**
    * This function displays a welcome Message to the user.
    */
