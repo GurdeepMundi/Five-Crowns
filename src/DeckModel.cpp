@@ -41,3 +41,10 @@ void DeckModel::shuffle() {
 void DeckModel::addCard(CardModel* c) {
   deck.push_back(c);
 }
+
+void DeckModel::removeCard(int p) {
+  for (int i = p-1; i < (deck.size()); i++) {
+    deck[i] = deck[i+1];
+  }
+  deck.pop_back();
+}

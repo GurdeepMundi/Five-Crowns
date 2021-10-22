@@ -10,6 +10,7 @@
 #include <CardModel.h>
 #include <string>
 #include <vector>
+#include <DeckModel.h>
 /***
 *this is the parent class of all of the players
 */
@@ -29,7 +30,7 @@ class PlayerModel {
   virtual void discard(int d) = 0;
   /**This function is used to draw a card from the draw pile
   */
-  void draw();
+  void draw(CardModel* c);
   /** sort function might not be implemented
   *void sort();
   *This function lets the user make a run (lay 3 or more consecutive cards
@@ -45,7 +46,7 @@ class PlayerModel {
   /**
   *@ Vector to store information about the players hand
   */
-  std::vector<CardModel*> hand;
+  DeckModel hand;
   /**
   *@ variable score is used to track accumulated score
   */

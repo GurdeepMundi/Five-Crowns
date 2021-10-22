@@ -19,21 +19,15 @@ std::string PlayerModel::getname() {
 }
 
 void PlayerModel::discard(int d) {
-  for (int i = d-1; i < (hand.size()); i++) {
-    hand[i] = hand[i+1];
-  }
-  hand.pop_back();
-
-//  hand.erase(hand.begin() + d);
+  hand.removeCard(d);
 }
 
 // void PlayerModel::sort() {
 //  // code here
 // }
 
-void PlayerModel::draw() {
-//  hand.push_back(this deck->deck.back());
-  //this deck->deck.pop_back();
+void PlayerModel::draw(CardModel* c) {
+  hand.addCard(c);
 }
 
 std::vector<CardModel*> PlayerModel::makeRun() {
