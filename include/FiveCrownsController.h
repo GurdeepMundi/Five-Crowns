@@ -9,6 +9,7 @@
 
 #include <iostream>
 #include <vector>
+#include <PlayerModel.h>
 
 class FiveCrownsController {
  public:
@@ -18,7 +19,10 @@ class FiveCrownsController {
   void callHelp();
   PlayRound(int roundNumber);
   void calcScore(int roundNumber);
+private:
+  int roundNumber;
+  std::vector<PlayerModel*>Players;
+  currentView: interface_UI*;
 
 };
 #endif
-  
