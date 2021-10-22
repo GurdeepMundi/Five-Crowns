@@ -20,4 +20,4 @@ void callHelp() {
 
 int FiveCrownsController::PlayRound(int roundNumber) {}
 
-void FiveCrownsController::calcScore() {}
+void FiveCrownsController::calcScore(int roundNumber) {}

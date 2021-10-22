@@ -53,6 +53,6 @@ class FiveCrownsController {
   /**
   * This is used for the currentView.
   */
-  currentView: interface_UI*;
+//  currentView: interface_UI*;
 };
 #endif
