@@ -20,5 +20,5 @@ void InterfaceUI::displayState() {}
 
 void InterfaceUI::byeMessage() {
   // if endgame Function is called display this message
-  std::cout << "Thank you for Playing bye bye" << endl;
+  std::cout << "Thank you for Playing bye bye" << std::endl;
 }
