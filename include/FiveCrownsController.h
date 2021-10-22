@@ -39,7 +39,7 @@ class FiveCrownsController {
   */
   void calcScore(int roundNumber);
 
-  private:
+ private:
   /**
   * @ param roundNumber is used to keep track of the rounds.
   */
