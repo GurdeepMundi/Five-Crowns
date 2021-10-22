@@ -8,7 +8,9 @@
 
 std::string InterfaceUI::askForUserName() {}
 
-void InterfaceUI::WelcomeMessage() {}
+void InterfaceUI::WelcomeMessage() {
+  std::cout << "Welcome to Five Crowns" << std::endl;
+}
 
 void InterfaceUI::askChoice() {}
 
@@ -16,4 +18,7 @@ void InterfaceUI::displayMenu() {}
 
 void InterfaceUI::displayState() {}
 
-void InterfaceUI::byeMessage() {}
+void InterfaceUI::byeMessage() {
+  // if endgame Function is called display this message
+  std::cout << "Thank you for Playing bye bye" << endl;
+}
