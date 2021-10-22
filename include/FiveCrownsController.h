@@ -7,4 +7,18 @@
 #ifndef FIVECROWNSCONTROLLER_H
 #define FIVECROWNSCONTROLLER_H
 
+#include <iostream>
+#include <vector>
+
+class FiveCrownsController {
+ public:
+  void endGame();
+  void setUpGame();
+  void dealCards();
+  void callHelp();
+  PlayRound(int roundNumber);
+  void calcScore(int roundNumber);
+
+};
 #endif
+  
