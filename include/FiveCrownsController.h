@@ -29,7 +29,7 @@ class FiveCrownsController {
   * This function is called when the user requires assitance with the game.
   */
   void callHelp();
-  /** This function is used to play a round in the game. 
+  /** This function is used to play a round in the game.
   * @ param roundNumber is used to keep track of the rounds.
   */
   PlayRound(int roundNumber);
@@ -38,7 +38,8 @@ class FiveCrownsController {
   * when determining the players score.
   */
   void calcScore(int roundNumber);
-private:
+
+  private:
   /**
   * @ param roundNumber is used to keep track of the rounds.
   */
@@ -51,6 +52,5 @@ private:
   * This is used for the currentView.
   */
   currentView: interface_UI*;
-
 };
 #endif
