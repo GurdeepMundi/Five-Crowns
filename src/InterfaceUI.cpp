@@ -4,3 +4,16 @@
 * File: InterfaceUI.cpp
 * Date Created: 16/10/2021
 */
+#include <InterfaceUI.h>
+
+std::string InterfaceUI::askForUserName() {}
+
+void InterfaceUI::WelcomeMessage() {}
+
+void InterfaceUI::askChoice() {}
+
+void InterfaceUI::displayMenu() {}
+
+void InterfaceUI::displayState() {}
+
+void InterfaceUI::byeMessage() {}

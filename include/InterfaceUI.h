@@ -7,7 +7,7 @@
 #ifndef INTERFACEUI_H
 #define INTERFACEUI_H
 
-#include<iostream>
+#include <iostream>
 #include <string>
 #include <FiveCrownsController.h>
 
