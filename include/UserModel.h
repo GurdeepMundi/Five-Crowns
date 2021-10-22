@@ -8,7 +8,12 @@
 #define USERMODEL_H
 #include <PlayerModel.h>
 class UserModel: public PlayerModel {
+  /***
+  */
   void help();
+  /***
+  *@param d
+  */
   void discard(int d);
 };
 #endif
