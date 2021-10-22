@@ -23,23 +23,29 @@ class PlayerModel {
   /**This function can be used to get the player's name
   */
   std::string getname();
-  /**This function used to remove a card from the user's hand and put to
-  *the discard pile
-  *@param d this is the card to be removed from hand
+  /**This function used to remove a card from the user's hand so that it can be
+  *put on the discard pile
+  *@param d address of the card to be removed from the hand
   */
   virtual void discard(int d) = 0;
   /**This function is used to draw a card from the draw pile
   */
   void draw(CardModel* c);
-  /** sort function might not be implemented
-  *void sort();
-  *This function lets the user make a run (lay 3 or more consecutive cards
+  /* sort function might not be implemented
+  *void sort();*/
+  /**This function lets the user make a run (lay 3 or more consecutive cards
   *from same suit)
   */
-  std::vector<CardModel*> makeRun();
+  void makeRun(std::vector<int> cardAddresses);
   /**This function lets the user make a book (3 or more cards of same rank)
   */
-  std::vector<CardModel*> makeBook();
+  void makeBook(std::vector<int> cardAddresses);
+  /**checks if the run is valid
+  * \returns true if the cards given meet requirements to make a run
+  *\retval <false> wrong combination of cards
+  */
+  bool isValidRun(std::vector<int> cardAddresses);
+  bool isValidBook(std::vector<int> cardAddresses);
 
  private:
   std::vector <CardModel*> deck;

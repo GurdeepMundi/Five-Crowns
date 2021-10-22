@@ -30,10 +30,10 @@ void PlayerModel::draw(CardModel* c) {
   hand.addCard(c);
 }
 
-std::vector<CardModel*> PlayerModel::makeRun() {
+void PlayerModel::makeRun(std::vector<int> cardAddresses) {
   // code here
 }
 
-std::vector<CardModel*> PlayerModel::makeBook() {
+void PlayerModel::makeBook(std::vector<int> cardAddresses) {
   // code here
 }
