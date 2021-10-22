@@ -9,9 +9,10 @@
 #include <PlayerModel.h>
 class UserModel: public PlayerModel {
   /**
+  * This function is used by the user when they require help
   */
   void help();
-  /**
+  /** This function is used to discard.
   *@param d
   */
   void discard(int d);
