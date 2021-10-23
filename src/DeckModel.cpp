@@ -36,3 +36,7 @@ void DeckModel::removeCard(int p) {
   }
   deck.pop_back();
 }
+
+CardModel* DeckModel::getCardAt(int cardAddress) {
+  return deck.at(cardAddress);
+}

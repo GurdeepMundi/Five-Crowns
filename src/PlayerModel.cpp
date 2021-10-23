@@ -29,9 +29,16 @@ void PlayerModel::discard(int d) {
 void PlayerModel::draw(CardModel* c) {
   hand.addCard(c);
 }
-
+//Gurdeep working on this fucntion
 void PlayerModel::makeRun(std::vector<int> cardAddresses) {
-  // code here
+  vector <CardModel*> cardsUnderInspection;
+  for(int ob: cardAddresses) {
+    cardsUnderInspection.push_back(hand.getCardAt(ob));
+  }
+  // sort this vector
+  //wildcards go to front
+  //then
+
 }
 
 void PlayerModel::makeBook(std::vector<int> cardAddresses) {
@@ -39,7 +46,11 @@ void PlayerModel::makeBook(std::vector<int> cardAddresses) {
 }
 
 bool PlayerModel::isValidRun(std::vector<int> cardAddresses) {
-  // code here
+  for(int i = 0; i < cardAddresses.size() -1; i++) {
+    if () {
+
+    }
+  }
 }
 bool PlayerModel::isValidBook(std::vector<int> cardAddresses) {
   // code here

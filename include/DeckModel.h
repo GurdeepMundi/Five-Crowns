@@ -25,6 +25,11 @@ class DeckModel {
   *@param c the card to be removed
   */
   void removeCard(int p);
+  /**
+  *\returns card stored at the given address in the deck
+  *@param cardAddress the address from which the card needs to be retrieved
+  */
+  CardModel* getCardAt(int cardAddress);
  private:
 std::vector <CardModel*> deck;///will be used to store all the cards
 };

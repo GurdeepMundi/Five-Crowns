@@ -61,7 +61,7 @@ class PlayerModel {
  private:
   std::vector <CardModel*> deck;
   /**
-  *@ Vector to store information about the players hand
+  *@ Vector this is player's hand (bunch of cards)
   */
   DeckModel hand;
   /**
