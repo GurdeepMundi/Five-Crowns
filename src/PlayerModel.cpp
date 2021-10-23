@@ -41,6 +41,6 @@ void PlayerModel::makeBook(std::vector<int> cardAddresses) {
 bool PlayerModel::isValidRun(std::vector<int> cardAddresses) {
   // code here
 }
-void PlayerModel::isValidBook(std::vector<int> cardAddresses) {
+bool PlayerModel::isValidBook(std::vector<int> cardAddresses) {
   // code here
 }
