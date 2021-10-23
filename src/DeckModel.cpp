@@ -40,3 +40,7 @@ void DeckModel::removeCard(int p) {
 CardModel* DeckModel::getCardAt(int cardAddress) {
   return deck.at(cardAddress);
 }
+
+CardModel* DeckModel::getTopCard() {
+  return deck.at(deck.size() - 1);
+}

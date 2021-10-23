@@ -30,6 +30,10 @@ class DeckModel {
   *@param cardAddress the address from which the card needs to be retrieved
   */
   CardModel* getCardAt(int cardAddress);
+  /**
+  *\returns card stored at the top of the deck (or at the end of vector)
+  */
+  CardModel* getTopCard();
  private:
 std::vector <CardModel*> deck;///will be used to store all the cards
 };
