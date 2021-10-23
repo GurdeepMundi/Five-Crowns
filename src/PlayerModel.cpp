@@ -31,8 +31,7 @@ void PlayerModel::draw(CardModel* c) {
 }
 
 void PlayerModel::makeRun(std::vector<int> cardAddresses) {
-
-
+  // code here
 }
 
 void PlayerModel::makeBook(std::vector<int> cardAddresses) {
@@ -41,7 +40,7 @@ void PlayerModel::makeBook(std::vector<int> cardAddresses) {
 //Gurdeep working on this fucntion
 bool PlayerModel::isValidRun(std::vector<int> cardAddresses) {
   std::vector <CardModel*> cardsUnderInspection;
-  for(int ob: cardAddresses) {
+  for (int ob : cardAddresses) {
     cardsUnderInspection.push_back(hand.getCardAt(ob));
   }
   // sort this vector
