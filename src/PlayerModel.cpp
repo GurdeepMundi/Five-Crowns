@@ -37,3 +37,10 @@ void PlayerModel::makeRun(std::vector<int> cardAddresses) {
 void PlayerModel::makeBook(std::vector<int> cardAddresses) {
   // code here
 }
+
+bool PlayerModel::isValidRun(std::vector<int> cardAddresses) {
+  // code here
+}
+void PlayerModel::isValidBook(std::vector<int> cardAddresses) {
+  // code here
+}

@@ -35,16 +35,27 @@ class PlayerModel {
   *void sort();*/
   /**This function lets the user make a run (lay 3 or more consecutive cards
   *from same suit)
+  *@param cardAddresses addresses of cards (stored in hand) which the user wants
+  * to lay down
   */
   void makeRun(std::vector<int> cardAddresses);
   /**This function lets the user make a book (3 or more cards of same rank)
+  *@param cardAddresses addresses of cards (stored in hand) which the user wants
+  * to lay down
   */
   void makeBook(std::vector<int> cardAddresses);
   /**checks if the run is valid
+  *@param cardAddresses addresses of cards (stored in hand) which the user wants
+  * to lay down
   * \returns true if the cards given meet requirements to make a run
   *\retval <false> wrong combination of cards
   */
   bool isValidRun(std::vector<int> cardAddresses);
+  /**checks if the run is valid
+  *@param cardAddresses addresses of cards (stored in hand) which the user wants
+  * to lay down
+  * \returns true if the cards given meet requirements to make a book
+  */
   bool isValidBook(std::vector<int> cardAddresses);
 
  private:
