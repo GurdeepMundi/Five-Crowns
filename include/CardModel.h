@@ -13,22 +13,21 @@ enum Suits {CLUBS, HEARTS, SPADES, DIAMONDS, STARS};
 
 class CardModel {
  public:
-  // Sahil is working on this
   /**Used to assign a score value to card
   *@param scoreValue score value of the card
   */
-  void setScoreValue(int scoreValue);
-  // Sahil is working on this
+  void setScoreValue(int scoreValue)
   /**Used to get score value of the card
   */
   int getScoreValue();
-  /**Used to set the rank (number)
-  *@param 
+  /**Used to set the rank (number) of the card
+  *@param r rank of the card
   */
   void setRank(int r);
-  // Muhammad
+  /**Used to set the suit of the card
+  *@param s suit of the card
+  */
   void setSuit(Suits s);
-  // Muhammad
  private:
 int rank;
 int scoreValue;
