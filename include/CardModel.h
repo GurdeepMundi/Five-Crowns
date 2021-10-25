@@ -34,6 +34,10 @@ class CardModel {
   /**Used to get the suit of the card👔
   */
   Suits getSuit();
+  /**set if the card is wild or not👹
+  *@param this will be set as new wildcard status
+  */
+  void setWildStatus(bool newStatus);
   /** \retvalue true if the card is a wildcard👹
   */
   bool isWildStatus();
