@@ -36,7 +36,7 @@ class CardModel {
   Suits getSuit();
   /** \retvalue true if the card is a wildcard
   */
-  bool isWild();
+  bool isWildStatus();
  private:
 int rank;
 int scoreValue;
