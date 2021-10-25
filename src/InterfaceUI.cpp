@@ -23,7 +23,7 @@ void InterfaceUI::WelcomeMessage() {
 
 int InterfaceUI::askChoice() {
   int choice;
-  std::cout << "What would you like to do?\n"
+  std::cout << "What would you like to do?\n" << \
   "1 - Discard\n2 - Make Run\n3 - Make Book\n4 - Help" std::endl;
   std::cin >> choice;
   return choice;
@@ -78,9 +78,9 @@ bool InterfaceUI::askGoOut() {
     std::cout << "Would you like to go out? (Y/N)" << std::endl;
     std::cin >> c;
     if (c == 'y' || c == 'Y') {
-      return TRUE;
+      return true;
     } else if (c == 'n' || c == 'N') {
-      return FALSE;
+      return false;
     } else {
       std::cout << "Invalid input" << std::endl;
     }
