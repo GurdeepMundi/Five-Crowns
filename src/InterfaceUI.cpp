@@ -23,7 +23,7 @@ void InterfaceUI::WelcomeMessage() {
 
 int InterfaceUI::askChoice() {
   int choice;
-  std::cout << "What would you like to do?\n" << \
+  std::cout << "What would you like to do?\n" <<
   "1 - Discard\n2 - Make Run\n3 - Make Book\n4 - Help" std::endl;
   std::cin >> choice;
   return choice;
