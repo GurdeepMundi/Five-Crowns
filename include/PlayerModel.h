@@ -34,7 +34,7 @@ class PlayerModel {
   /* sort function might not be implemented
   *void sort();*/
   /**This function lets the user make a run (lay 3 or more consecutive cards
-  *from same suit)
+  *from same suit) (basically removes these cards from hand if possible)
   *@param cardAddresses addresses of cards (stored in hand) which the user wants
   * to lay down
   */
