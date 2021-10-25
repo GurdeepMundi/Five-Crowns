@@ -9,6 +9,7 @@
 
 #include <iostream>
 #include <string>
+#include <vector>
 #include <PlayerModel.h>
 #include <FiveCrownsController.h>
 
@@ -19,13 +20,29 @@ class InterfaceUI {
   */
   std::string askForUserName();
   /**
-  * This function displays a welcome Message to the user.
+  * This function displays a welcome message to the user.
   */
   void WelcomeMessage();
   /**
   * This function asks user for their choice when playing the game.
   */
-  void askChoice();
+  int askChoice();
+  /**
+  * This function asks user which card to discard.
+  */
+  int askDiscard();
+  /**
+  * This function asks user to pick the cards in a run.
+  */
+  std::vector<int> askRun();
+  /**
+  * This function asks user to pick the cards in a book.
+  */
+  std::vector<int> askBook();
+  /**
+  * This function asks user if they would like to go out.
+  */
+  bool askGoOut();
   /**
   * This function displays the game menu to the user.
   */
@@ -34,6 +51,10 @@ class InterfaceUI {
   * This function displays the state of the game to the user.
   */
   void displayState();
+  /**
+  * This function displays how to play the game to the user.
+  */
+  void displayHelp();
   /**
   * This function displays a goodbye message to the user.
   */
