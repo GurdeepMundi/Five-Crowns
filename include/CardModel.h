@@ -37,6 +37,7 @@ class CardModel {
   /** \retvalue true if the card is a wildcard
   */
   bool isWildStatus();
+
  private:
 int rank;
 int scoreValue;
