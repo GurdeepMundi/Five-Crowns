@@ -43,15 +43,22 @@ bool PlayerModel::isValidRun(std::vector<int> cardAddresses) {
   for (int ob : cardAddresses) {
     cardsUnderInspection.push_back(hand.getCardAt(ob));
   }
-  // sort this vector
+  // sort cardsUnderInspection
   //wildcards go to front
   //then
-  /*
-  for(int i = 0; i < cardAddresses.size() -1; i++) {
-    if () {
 
+  for (int i = 0; i < cardAddresses.size() -1; i++) {
+    if (cardsUnderInspection.at(i)->getSuit() \
+    != cardsUnderInspection.at(i+1)->getSuit()) {
+      if (!cardsUnderInspection.at(i)->isWildStatus()) {
+        return false;
+      } else if (cardsUnderInspection.at(i)->getRank() \
+      != cardsUnderInspection.at(i + 1)->getRank()) {
+        return false;
+      }
     }
-  }*/
+  }
+  return true;
 }
 bool PlayerModel::isValidBook(std::vector<int> cardAddresses) {
   // code here
