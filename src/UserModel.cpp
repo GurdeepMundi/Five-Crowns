@@ -6,9 +6,10 @@
 */
 
 #include <UserModel.h>
+#include <iostream>
 
 void UserModel::help() {
-  // code here
+  std::"Rules of the Game" std::endl;
 }
 
 void UserModel::discard(int d) {
