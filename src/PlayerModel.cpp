@@ -44,7 +44,7 @@ void PlayerModel::makeRun(std::vector<int> cardAddresses) {
 }
 
 void PlayerModel::makeBook(std::vector<int> cardAddresses) {
- //code here
+  //code here
 }
 
 //Gurdeep working on this fucntion
