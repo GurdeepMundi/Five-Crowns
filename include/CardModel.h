@@ -16,10 +16,10 @@ class CardModel {
   /**Used to assign a score value to card
   *@param scoreValue score value of the card
   */
-<<<<<<< HEAD
+
   void setScoreValue(int scoreValue);
-=======
-  void setScoreValue(int scoreValue)();
+
+  void setScoreValue(int scoreValue);
 
   /**Used to get score value of the card
   */
