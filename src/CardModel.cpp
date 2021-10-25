@@ -21,3 +21,11 @@ void CardModel::setRank(int r) {
 void CardModel::setSuit(Suits s) {
   this->suit = s;
 }
+
+Suits CardModel::getSuit() {
+  return this->suit;
+}
+
+int CardModel::getRank() {
+  return this->rank;
+}
