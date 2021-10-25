@@ -27,11 +27,11 @@ class CardModel {
   /** \returns the rank of the card
   */
   int getRank();
-  /**Used to set the suit of the card
+  /**Used to set the suit of the card👔
   *@param s suit of the card
   */
   void setSuit(Suits s);
-  /**Used to get the suit of the card
+  /**Used to get the suit of the card👔
   */
   Suits getSuit();
   /** \retvalue true if the card is a wildcard👹
