@@ -39,14 +39,37 @@ void PlayerModel::makeBook(std::vector<int> cardAddresses) {
 }
 //Gurdeep working on this fucntion
 bool PlayerModel::isValidRun(std::vector<int> cardAddresses) {
+  //this vector will be containing the cards that the user wants to lay
+  //as a run
   std::vector <CardModel*> cardsUnderInspection;
+  //populating the vector cardsUnderInspection
   for (int ob : cardAddresses) {
     cardsUnderInspection.push_back(hand.getCardAt(ob));
   }
-  // sort cardsUnderInspection
-  //wildcards go to front
-  //then
-
+  //sorting the vector by rank to support further operations
+  for (int i = 0; i < cardsUnderInspection.size()-1; i++) {
+    CardModel* temp = cardsUnderInspection.at(i);
+    for (int j = i+1; j < cardsUnderInspection.size(); j++) {
+      //compare with every card next to it
+      if (cardsUnderInspection.at(i)->getRank() > \
+      cardsUnderInspection.at(j)->getRank()) {
+        //swap if current card is smaller than next one
+        cardsUnderInspection.at(i) = cardsUnderInspection.at(j);
+        cardsUnderInspection.at(j) = temp;
+      }
+    }
+    delete temp;
+  }
+  //putting the wildcarsds in front of the vector
+  for(int i = 0; i< cardsUnderInspection.size(); i++){
+    if (cardsUnderInspection.at(i)->isWildStatus()) {
+      CardModel* temp = cardsUnderInspection.at(i);
+      cardsUnderInspection.erase (cardsUnderInspection.begin() + i);
+      cardsUnderInspection.insert (cardsUnderInspection.begin(), temp);
+      delete temp;
+    }
+  }
+  //checking if the run is possible
   for (int i = 0; i < cardAddresses.size() -1; i++) {
     if (cardsUnderInspection.at(i)->getSuit() \
     != cardsUnderInspection.at(i+1)->getSuit()) {
