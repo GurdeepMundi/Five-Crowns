@@ -20,7 +20,7 @@ class CardModel {
   void setScoreValue(int scoreValue);
 =======
   void setScoreValue(int scoreValue)();
->>>>>>> 97ca51f7a66f242a4bdecc0a9eab2456124d5ebc
+
   /**Used to get score value of the card
   */
   int getScoreValue();
