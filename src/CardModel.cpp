@@ -30,6 +30,6 @@ int CardModel::getRank() {
   return this->rank;
 }
 
-bool CardModel::isWild() {
+bool CardModel::isWildStatus() {
   return this->isWild;
 }
