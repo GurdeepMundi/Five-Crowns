@@ -14,7 +14,7 @@ enum Suits {CLUBS, HEARTS, SPADES, DIAMONDS, STARS};
 class CardModel {
  public:
   /**Used to assign a score value to card
-  *@param scoreValue score value of the card
+  *@param scoreValue score value of the card🏆
   */
   void setScoreValue(int scoreValue);
   /**Used to get score value of the card
