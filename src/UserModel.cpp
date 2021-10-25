@@ -9,7 +9,7 @@
 #include <iostream>
 
 void UserModel::help() {
-  std::"Rules of the Game" std::endl;
+//  std::"Rules of the Game" std::endl;
 }
 
 void UserModel::discard(int d) {
