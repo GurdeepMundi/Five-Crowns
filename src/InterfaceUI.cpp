@@ -23,20 +23,16 @@ void InterfaceUI::WelcomeMessage() {
 
 int InterfaceUI::askChoice() {
   int choice;
-<<<<<<< HEAD
-  std::cout << "What would you like to do?\n" <<
-  "1 - Discard\n2 - Make Run\n3 - Make Book\n4 - Help" std::endl;
-=======
   std::cout << "What would you like to do?\n" << \
   "1 - Discard\n2 - Make Run\n3 - Make Book\n4 - Help" << std::endl;
->>>>>>> 91c5e8e66a311d603965b09b900253bdc7ad72ac
   std::cin >> choice;
   return choice;
 }
 
 int InterfaceUI::askDiscard() {
   int choice;
-  std::cout << "Please enter the position of the card you would like to discard:" << std::endl;
+  std::cout << "Please enter the position of the card"
+  " you would like to discard:" << std::endl;
   std::cin >> choice;
   return choice;
 }
@@ -50,7 +46,8 @@ std::vector<int> InterfaceUI::askRun() {
     std::cout << "Run must be at least 3 cards." << std::endl;
     return run;
   } else {
-    std::cout << "Please enter the position of the cards in your Run one by one:" << std::endl;
+    std::cout << "Please enter the position of the cards"
+    " in your Run one by one:" << std::endl;
     for (int i = 0; i <= runSize; i++) {
       std::cin >> cardPos;
       run.push_back(cardPos);
@@ -68,7 +65,8 @@ std::vector<int> InterfaceUI::askBook() {
     std::cout << "Book must be at least 3 cards." << std::endl;
     return book;
   } else {
-    std::cout << "Please enter the position of the cards in your Book one by one:" << std::endl;
+    std::cout << "Please enter the position of the cards"
+    " in your Book one by one:" << std::endl;
     for (int i = 0; i <= bookSize; i++) {
       std::cin >> cardPos;
       book.push_back(cardPos);
