@@ -48,11 +48,11 @@ bool PlayerModel::isValidRun(std::vector<int> cardAddresses) {
   //then
 
   for(int i = 0; i < cardAddresses.size() -1; i++) {
-    if (cardsUnderInspection.at(i)->getSuit()
+    if (cardsUnderInspection.at(i)->getSuit() \
     != cardsUnderInspection.at[i+1]->getsuit) {
       if (!cardsUnderInspection.at(i)->isWildStatus()) {
         return false;
-      }else if (cardsUnderInspection.at(i)->getRank
+      }else if (cardsUnderInspection.at(i)->getRank \
       != cardsUnderInspection.at(i + 1)) {
         return false;
       }
