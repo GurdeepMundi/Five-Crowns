@@ -61,11 +61,11 @@ bool PlayerModel::isValidRun(std::vector<int> cardAddresses) {
     delete temp;
   }
   //putting the wildcarsds in front of the vector
-  for(int i = 0; i< cardsUnderInspection.size(); i++){
+  for (int i = 0; i< cardsUnderInspection.size(); i++) {
     if (cardsUnderInspection.at(i)->isWildStatus()) {
       CardModel* temp = cardsUnderInspection.at(i);
-      cardsUnderInspection.erase (cardsUnderInspection.begin() + i);
-      cardsUnderInspection.insert (cardsUnderInspection.begin(), temp);
+      cardsUnderInspection.erase(cardsUnderInspection.begin() + i);
+      cardsUnderInspection.insert(cardsUnderInspection.begin(), temp);
       delete temp;
     }
   }
