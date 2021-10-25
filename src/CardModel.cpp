@@ -29,3 +29,7 @@ Suits CardModel::getSuit() {
 int CardModel::getRank() {
   return this->rank;
 }
+
+bool CardModel::isWild() {
+  return this->isWild;
+}
