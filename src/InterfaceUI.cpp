@@ -15,6 +15,7 @@ std::string InterfaceUI::askForUserName() {
   std::cout << "Please Enter Your Name:" << std::endl;
   std::cin >> UserName;
   //setName(UserName);
+  return UserName;
 }
 
 void InterfaceUI::WelcomeMessage() {
