@@ -13,7 +13,7 @@
 #include <PlayerModel.h>
 #include <FiveCrownsController.h>
 
-class InterfaceUI {
+class FaceUI {
  public:
   /** This function asks for the user name.
   * @ param string is used as an input for the user name.
