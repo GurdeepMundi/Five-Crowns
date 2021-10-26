@@ -61,10 +61,12 @@ void FiveCrownsController::setUpGame() {
 
 void dealCards() {}
 
+/*
 void callHelp() {
   UserModel* temp = new UserModel();
   temp->help();
 }
+*/
 
 void FiveCrownsController::PlayRound(int roundNumber) {}
 
