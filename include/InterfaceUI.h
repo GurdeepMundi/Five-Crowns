@@ -53,7 +53,7 @@ class InterfaceUI {
   void displayState();
   /**
   * This function displays how to play the game to the user.
-  */vector
+  */
   void displayHelp();
   /**
   * This function displays a goodbye message to the user.
