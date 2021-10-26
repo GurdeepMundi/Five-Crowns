@@ -13,35 +13,34 @@ void FiveCrownsController::endGame() {
 
 void FiveCrownsController::MakeDeck() {
   CardModel* tempCard = new CardModel();
-  enum Suits {CLUBS, HEARTS, SPADES, DIAMONDS, STARS};
-  Suits Object;
+  //enum Suits {CLUBS, HEARTS, SPADES, DIAMONDS, STARS};
+  //Suits Object;
 
   for(int i = 3; i < 14; i++) {
     for(int j = 1; j < 6; j++) {
 
       switch (j) {
         case 1:
-        Object = CLUBS;
+        tempCard->setSuit(CLUBS);
         break;
 
         case 2:
-        Object = HEARTS;
+        tempCard->setSuit(HEARTS);
         break;
 
         case 3:
-        Object = SPADES;
+        tempCard->setSuit(SPADES);
         break;
 
         case 4:
-        Object = DIAMONDS;
+        tempCard->setSuit(DIAMONDS);
         break;
 
         case 5:
-        Object = STARS;
+        tempCard->setSuit(STARS);
         break;
       }
       tempCard->setRank(i);
-      tempCard->setSuit(Object);
       tempCard->setScoreValue(i);
       deck->addCard(tempCard);
     }
