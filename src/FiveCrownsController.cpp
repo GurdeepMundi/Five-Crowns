@@ -23,3 +23,5 @@ void callHelp() {
 void FiveCrownsController::PlayRound(int roundNumber) {}
 
 void FiveCrownsController::calcScore(int roundNumber) {}
+
+void FiveCrownsController::playGame();
