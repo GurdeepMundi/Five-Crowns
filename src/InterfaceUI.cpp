@@ -8,7 +8,9 @@
 #include <iostream>
 #include <string>
 #include <vector>
-
+InterfaceUI::InterfaceUI() {
+  //constructor
+}
 std::string InterfaceUI::askForUserName() {
   std::string UserName;
   std::cout << "Please Enter Your Name:" << std::endl;
