@@ -16,9 +16,8 @@ void FiveCrownsController::MakeDeck() {
   //enum Suits {CLUBS, HEARTS, SPADES, DIAMONDS, STARS};
   //Suits Object;
 
-  for(int i = 3; i < 14; i++) {
-    for(int j = 1; j < 6; j++) {
-
+  for (int i = 3; i < 14; i++) {
+    for (int j = 1; j < 6; j++) {
       switch (j) {
         case 1:
         tempCard->setSuit(CLUBS);
@@ -45,12 +44,11 @@ void FiveCrownsController::MakeDeck() {
       deck->addCard(tempCard);
     }
   }
-  for(int k = 1; k < 4; k++) {
+  for (int k = 1; k < 4; k++) {
     //Object = CLUBS;
     tempCard->setRank(50);
     tempCard->setSuit(CLUBS);
     tempCard->setScoreValue(50);
-
   }
 }
 
