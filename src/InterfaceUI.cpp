@@ -1,26 +1,26 @@
 /*
 * CPSC 3720 Fall 2021 - Group K - Five Crowns
 * Sahil Devnani, Gurdeep Singh, Muhammad Saleh <sahil.devnani@Uleth.ca>
-* File: FaceUI.cpp
+* File: InterfaceUI.cpp
 * Date Created: 16/10/2021
 */
-#include <InterfaceUI.h>
+#include <InterInterfaceUI.h>
 #include <iostream>
 #include <string>
 #include <vector>
 
-std::string FaceUI::askForUserName() {
+std::string InterfaceUI::askForUserName() {
   std::string UserName;
   std::cout << "Please Enter Your Name:" << std::endl;
   std::cin >> UserName;
   return UserName;
 }
 
-void FaceUI::WelcomeMessage() {
+void InterfaceUI::WelcomeMessage() {
   std::cout << "Welcome to Five Crowns!" << std::endl;
 }
 
-int FaceUI::askChoice() {
+int InterfaceUI::askChoice() {
   int choice;
   std::cout << "What would you like to do?\n" << \
   "1 - Discard\n2 - Make Run\n3 - Make Book\n4 - Help" << std::endl;
@@ -28,7 +28,7 @@ int FaceUI::askChoice() {
   return choice;
 }
 
-int FaceUI::askDiscard() {
+int InterfaceUI::askDiscard() {
   int choice;
   std::cout << "Please enter the position of the card"
   " you would like to discard:" << std::endl;
@@ -36,7 +36,7 @@ int FaceUI::askDiscard() {
   return choice;
 }
 
-std::vector<int> FaceUI::askRun() {
+std::vector<int> InterfaceUI::askRun() {
   std::vector<int> run;
   int cardPos, runSize;
   std::cout << "Please input the amount of cards in your Run:" << std::endl;
@@ -55,7 +55,7 @@ std::vector<int> FaceUI::askRun() {
   }
 }
 
-std::vector<int> FaceUI::askBook() {
+std::vector<int> InterfaceUI::askBook() {
   std::vector<int> book;
   int cardPos, bookSize;
   std::cout << "Please input the amount of cards in your Book:" << std::endl;
@@ -74,7 +74,7 @@ std::vector<int> FaceUI::askBook() {
   }
 }
 
-bool FaceUI::askGoOut() {
+bool InterfaceUI::askGoOut() {
   char c;
   do {
     std::cout << "Would you like to go out? (Y/N)" << std::endl;
@@ -89,13 +89,13 @@ bool FaceUI::askGoOut() {
   } while (c != 'y' && c != 'Y' && c != 'n' && c != 'N');
 }
 
-void FaceUI::displayMenu() {}
+void InterfaceUI::displayMenu() {}
 
-void FaceUI::displayState() {}
+void InterfaceUI::displayState() {}
 
-void FaceUI::displayHelp() {}
+void InterfaceUI::displayHelp() {}
 
-void FaceUI::byeMessage() {
+void InterfaceUI::byeMessage() {
   // if endgame Function is called display this message
   std::cout << "Thank you for Playing  Goodbye" << std::endl;
 }
