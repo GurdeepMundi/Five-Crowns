@@ -12,7 +12,7 @@
 #include <cstdlib>
 #include <PlayerModel.h>
 #include <UserModel.h>
-#include <interfaceUI.h>
+#include <InterfaceUI.h>
 
 class FiveCrownsController {
  public:
