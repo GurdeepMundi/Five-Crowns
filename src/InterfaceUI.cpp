@@ -8,7 +8,7 @@
 #include <iostream>
 #include <string>
 #include <vector>
-
+/*
 std::string InterfaceUI::askForUserName() {
   std::string UserName;
   std::cout << "Please Enter Your Name:" << std::endl;
@@ -114,4 +114,4 @@ void InterfaceUI::displayHelp() {
 void InterfaceUI::byeMessage() {
   // if endgame Function is called display this message
   std::cout << "Thank you for Playing! Goodbye!" << std::endl;
-}
+}*/
