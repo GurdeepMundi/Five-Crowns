@@ -11,7 +11,6 @@
 #include <string>
 #include <vector>
 #include <PlayerModel.h>
-#include <FiveCrownsController.h>
 
 class InterfaceUI {
  public:
