@@ -4,13 +4,11 @@
 * File: InterfaceUI.cpp
 * Date Created: 16/10/2021
 */
+#include <InterfaceUI.h>
 #include <iostream>
 #include <string>
 #include <vector>
-#include <InterfaceUI.h>
-InterfaceUI::InterfaceUI() {
-  //constructor
-}
+
 std::string InterfaceUI::askForUserName() {
   std::string UserName;
   std::cout << "Please Enter Your Name:" << std::endl;
@@ -95,9 +93,25 @@ void InterfaceUI::displayMenu() {}
 
 void InterfaceUI::displayState() {}
 
-void InterfaceUI::displayHelp() {}
+void InterfaceUI::displayHelp() {
+  std::cout << "The objective of Five Crowns"
+  << " is to finish with the lowest score at the end of 11 rounds\n"
+  << "A turn consists of drawing a card,\n"
+  << "Going Out by playing Books and Runs,\n"
+  << "and discarding a card.\n"
+  << "To Go Out, all of your cards must be able to be played\n"
+  << "into Books or Runs, with one card left to be discarded.\n"
+  << "A Book consists of a three or more cards of the same value.\n"
+  << "Eg. Six of Clubs, Six of Hearts, Six of Clubs\n"
+  << "A Run consists of three or more consecutive cards of the same suit.\n"
+  << "Eg. Four of Spades, Five of Spades, Six of Spades\n"
+  << "Wild cards can be to represent any card in a Book or Run.\n"
+  << "A card is Wild if its value matches the number of the round,\n"
+  << "starting with Threes in the first round\n"
+  << "and ending with Kings in the Eleventh."
+}
 
 void InterfaceUI::byeMessage() {
   // if endgame Function is called display this message
-  std::cout << "Thank you for Playing  Goodbye" << std::endl;
+  std::cout << "Thank you for Playing! Goodbye!" << std::endl;
 }
