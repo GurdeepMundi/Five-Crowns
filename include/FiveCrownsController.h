@@ -16,6 +16,7 @@
 
 class FiveCrownsController {
  public:
+   FiveCrownsController() {}
   /**
   * This function would be called if the user wants to end the game.
   */
