@@ -56,7 +56,7 @@ void FiveCrownsController::setUpGame() {
   currentView->WelcomeMessage();
   Players.at(0)->setName(currentView->askForUserName());
   MakeDeck();
-  //MakeDeck();
+  MakeDeck();
 }
 
 void dealCards() {}
