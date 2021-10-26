@@ -61,6 +61,6 @@ class InterfaceUI {
   */
   void byeMessage();
 private:
-  string welcomeMessage = "hey yo! welcome to the game";
+  std::string welcomeMessage = "hey yo! welcome to the game";
 };
 #endif
