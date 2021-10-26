@@ -20,6 +20,6 @@ void callHelp() {
   // UserModel.help();
 }
 
-int FiveCrownsController::PlayRound(int roundNumber) {}
+void FiveCrownsController::PlayRound(int roundNumber) {}
 
 void FiveCrownsController::calcScore(int roundNumber) {}
