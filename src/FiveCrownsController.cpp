@@ -24,4 +24,4 @@ void FiveCrownsController::PlayRound(int roundNumber) {}
 
 void FiveCrownsController::calcScore(int roundNumber) {}
 
-void FiveCrownsController::playGame();
+void FiveCrownsController::playGame(){}
