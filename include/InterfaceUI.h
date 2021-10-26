@@ -59,6 +59,6 @@ class InterfaceUI {
   /**
   * This function displays a goodbye message to the user.
   */
-  void byeMessage();
+  void byeMessage();*/
 };
 #endif
