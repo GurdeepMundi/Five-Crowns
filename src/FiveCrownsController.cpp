@@ -53,9 +53,9 @@ void FiveCrownsController::MakeDeck() {
 }
 
 void FiveCrownsController::setUpGame() {
-  currentView->WelcomeMessage();
+  //currentView->WelcomeMessage();
   //Players.at(0)->setName(currentView->askForUserName());
-  //MakeDeck();
+  MakeDeck();
   //MakeDeck();
 }
 
