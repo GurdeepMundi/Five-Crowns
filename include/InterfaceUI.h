@@ -60,5 +60,7 @@ class InterfaceUI {
   * This function displays a goodbye message to the user.
   */
   void byeMessage();
+private:
+  string welcomeMessage = "hey yo! welcome to the game";
 };
 #endif
