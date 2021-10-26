@@ -7,8 +7,8 @@
 #include <InterfaceUI.h>
 
 int main(int argc, char **argv) {
-  FiveCrownsController *A = new FiveCrownsController();
+  FiveCrownsController A; //= new FiveCrownsController();
   InterfaceUI* aView = new InterfaceUI();
-  A->setUpGame();
+  A.setUpGame();
   return 0;
 }
