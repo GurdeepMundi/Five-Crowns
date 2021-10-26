@@ -5,12 +5,60 @@
 * Date Created: 16/10/2021
 */
 #include <FiveCrownsController.h>
+#include <CardModel.h>
 
 void FiveCrownsController::endGame() {
   exit(0);
 }
 
-void FiveCrownsController::setUpGame() {}
+void FiveCrownsController::MakeDeck() {
+  CardModel* tempCard = new CardModel();
+  enum Suits {CLUBS, HEARTS, SPADES, DIAMONDS, STARS};
+  Suits Object;
+
+  for(int i = 3; i < 14; i++) {
+    for(int j = 1; j < 6; j++) {
+
+      switch (j) {
+        case 1:
+        Object = CLUBS;
+        break;
+
+        case 2:
+        Object = HEARTS;
+        break;
+
+        case 3:
+        Object = SPADES;
+        break;
+
+        case 4:
+        Object = DIAMONDS;
+        break;
+
+        case 5:
+        Object = STARS;
+        break;
+      }
+      tempCard->setRank(i);
+      tempCard->setSuit(Object);
+      tempCard->setScoreValue(i);
+      deck->addCard(tempCard);
+    }
+  }
+  for(int k = 1; k < 4; k++) {
+    Object = CLUBS;
+    tempCard->setRank(50);
+    tempCard->setSuit(Object);
+    tempCard->setScoreValue(50);
+
+  }
+}
+
+void FiveCrownsController::setUpGame() {
+  currentView->WelcomeMessage();
+  Players.at(0)->setName(currentView->askForUserName());
+}
 
 void dealCards() {}
 
@@ -24,4 +72,4 @@ void FiveCrownsController::PlayRound(int roundNumber) {}
 
 void FiveCrownsController::calcScore(int roundNumber) {}
 
-void FiveCrownsController::playGame(){}
+void FiveCrownsController::playGame() {}

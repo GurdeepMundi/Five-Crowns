@@ -12,6 +12,7 @@
 #include <cstdlib>
 #include <PlayerModel.h>
 #include <UserModel.h>
+#include <interfaceUI.h>
 
 class FiveCrownsController {
  public:
@@ -44,6 +45,10 @@ class FiveCrownsController {
   * This function loops through the game 11 times.
   */
   void playGame();
+  /**
+  * This function implements the deck
+  */
+  void MakeDeck();
 
  private:
   /**
@@ -57,6 +62,8 @@ class FiveCrownsController {
   /**
   * This is used for the currentView.
   */
-//  currentView: interface_UI*;
+  interface_UI* currentView;
+
+  DeckModel* deck;
 };
 #endif
