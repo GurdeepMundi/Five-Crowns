@@ -108,7 +108,7 @@ void InterfaceUI::displayHelp() {
   << "Wild cards can be to represent any card in a Book or Run.\n"
   << "A card is Wild if its value matches the number of the round,\n"
   << "starting with Threes in the first round\n"
-  << "and ending with Kings in the Eleventh."
+  << "and ending with Kings in the Eleventh.";
 }
 
 void InterfaceUI::byeMessage() {
