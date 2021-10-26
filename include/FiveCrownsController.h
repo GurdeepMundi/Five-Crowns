@@ -51,6 +51,7 @@ class FiveCrownsController {
   void MakeDeck();
 
  private:
+   InterfaceUI * myInterface;
   /**
   * @ param roundNumber is used to keep track of the rounds.
   */
@@ -62,8 +63,6 @@ class FiveCrownsController {
   /**
   * This is used for the currentView.
   */
-  InterfaceUI currentView;
-
   DeckModel* deck;
 };
 #endif
