@@ -118,4 +118,4 @@ void InterfaceUI::displayHelp() {
 void InterfaceUI::byeMessage() {
   // if endgame Function is called display this message
   std::cout << "Thank you for Playing! Goodbye!" << std::endl;
-}*/
+}
