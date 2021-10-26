@@ -62,7 +62,7 @@ class FiveCrownsController {
   /**
   * This is used for the currentView.
   */
-  Interface_UI* currentView;
+  InterfaceUI* currentView;
 
   DeckModel* deck;
 };

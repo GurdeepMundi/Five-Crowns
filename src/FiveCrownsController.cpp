@@ -46,9 +46,9 @@ void FiveCrownsController::MakeDeck() {
     }
   }
   for(int k = 1; k < 4; k++) {
-    Object = CLUBS;
+    //Object = CLUBS;
     tempCard->setRank(50);
-    tempCard->setSuit(Object);
+    tempCard->setSuit(CLUBS);
     tempCard->setScoreValue(50);
 
   }
