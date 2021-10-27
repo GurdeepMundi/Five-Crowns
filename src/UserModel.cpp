@@ -9,5 +9,7 @@
 #include <iostream>
 
 void UserModel::discard(int d) {
-  // code here
+  void PlayerModel::discard(int d) {
+    hand->removeCard(d-1);
+  }
 }
