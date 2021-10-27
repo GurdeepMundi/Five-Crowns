@@ -29,7 +29,7 @@ void PlayerModel::addScore(int s) {
 }
 
 void PlayerModel::discard(int d) {
-  hand->removeCard(d);
+  hand->removeCard(d-1);
 }
 
 // void PlayerModel::sort() {
@@ -46,7 +46,7 @@ void PlayerModel::makeRun(std::vector<int> cardAddresses) {
     //affect cards at the front
     std::sort(cardAddresses.begin(), cardAddresses.end(), std::greater<int>());
     for (int ob : cardAddresses) {
-      hand->removeCard(ob);
+      hand->removeCard(ob-1);
     }
   }
 }
@@ -57,7 +57,7 @@ void PlayerModel::makeBook(std::vector<int> cardAddresses) {
     //affect cards at the front
     std::sort(cardAddresses.begin(), cardAddresses.end(), std::greater<int>());
     for (int ob : cardAddresses) {
-      hand->removeCard(ob);
+      hand->removeCard(ob-1);
     }
   }
 }
