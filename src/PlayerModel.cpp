@@ -20,6 +20,14 @@ std::string PlayerModel::getname() {
   return this->name;
 }
 
+DeckModel PlayerModel::getHand() {
+  return this->hand;
+}
+
+void PlayerModel::addScore(int s) {
+  this->score = this->score + s;
+}
+
 void PlayerModel::discard(int d) {
   hand.removeCard(d);
 }

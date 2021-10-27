@@ -23,6 +23,13 @@ class PlayerModel {
   /**This function can be used to get the player's name
   */
   std::string getname();
+  /**This function can be used to get the player's hand
+  */
+  DeckModel getHand();
+  /**This function adds points to the players score
+  *@param s this will be the player's added points
+  */
+  void addScore(int s);
   /**This function used to remove a card from the user's hand so that it can be
   *put on the discard pile
   *@param d address of the card to be removed from the hand
