@@ -61,7 +61,7 @@ int DeckModel::getSize() {
 }
 
 void DeckModel::setWild(int roundNumber) {
-  for(int i = 0; i < deck.size(); i++) {
+  for (int i = 0; i < deck.size(); i++) {
     if (deck.at(i)->getRank() == roundNumber + 2) {
       deck.at(i)->setWildStatus(true);
       deck.at(i)->setScoreValue(20);
