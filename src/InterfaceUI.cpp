@@ -17,7 +17,8 @@ std::string InterfaceUI::askForUserName() {
 }
 
 void InterfaceUI::WelcomeMessage() {
-  std::cout << "Welcome to Five Crowns!" << std::endl;
+  std::cout << "Welcome to Five Crowns!\n"
+  << "It ain't over till the Kings go Wild!" << std::endl;
 }
 
 int InterfaceUI::askChoice() {
@@ -84,7 +85,7 @@ bool InterfaceUI::askGoOut() {
     } else if (c == 'n' || c == 'N') {
       return false;
     } else {
-      std::cout << "Invalid input" << std::endl;
+      std::cout << "Invalid Input" << std::endl;
     }
   } while (c != 'y' && c != 'Y' && c != 'n' && c != 'N');
 }
@@ -95,7 +96,10 @@ void InterfaceUI::displayState() {}
 
 void InterfaceUI::displayHelp() {
   std::cout << "The objective of Five Crowns"
-  << " is to finish with the lowest score at the end of 11 rounds\n"
+  << " is to finish with the lowest score at the end of 11 rounds.\n"
+  << "Each round, players are dealt the amount of cards\n"
+  << "corresponding with the round number,\n"
+  << "starting at three and ending at thirteen.\n"
   << "A turn consists of drawing a card,\n"
   << "Going Out by playing Books and Runs,\n"
   << "and discarding a card.\n"
@@ -108,7 +112,16 @@ void InterfaceUI::displayHelp() {
   << "Wild cards can be to represent any card in a Book or Run.\n"
   << "A card is Wild if its value matches the number of the round,\n"
   << "starting with Threes in the first round\n"
-  << "and ending with Kings in the Eleventh.";
+  << "and ending with Kings in the Eleventh.\n"
+  << "Jokers are always Wild.\n"
+  << "Once a player goes out, the remaining players have one more turn\n"
+  << "to play as many Books or Runs as they can and discard a card.\n"
+  << "Any remaining cards are counted as points against the player.\n"
+  << "Wild cards are worth 20 points, Jokers are worth 50 points,\n"
+  << "and every other card is worth its value.\n"
+  << "(Jacks = 11, Queens = 12, Kings = 13)\n"
+  << "Play continues until all 11 rounds are complete."
+  << "The player with the lowest score wins";
 }
 
 void InterfaceUI::byeMessage() {
@@ -122,8 +135,13 @@ void InterfaceUI::help() {
 
 int InterfaceUI::askDraw() {
   int input;
-  std::cout << "Do you want to draw from the draw pile (1)"
-  << " or discard pile (2) ? " << std::endl;
-  std::cin >> input;
+  do {
+    std::cout << "Do you want to draw from the draw pile (1)"
+    << " or discard pile (2) ? " << std::endl;
+    cin>>input;
+    if (input != 1 && input != 2) {
+      std::cout << "Invalid Input." << std::endl;
+    }
+  } while (input != 1 && input != 2);
   return input;
 }
