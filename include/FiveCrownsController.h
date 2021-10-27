@@ -65,5 +65,9 @@ class FiveCrownsController {
   * This is used for the currentView.
   */
   DeckModel* deck;
+  /**
+  * This is used for the discard pile
+  */
+  DeckModel* discardPile;
 };
 #endif
