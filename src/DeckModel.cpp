@@ -44,3 +44,7 @@ CardModel* DeckModel::getCardAt(int cardAddress) {
 CardModel* DeckModel::getTopCard() {
   return deck.at(deck.size() - 1);
 }
+
+int DeckModel::getSize() {
+  return deck.size();
+}

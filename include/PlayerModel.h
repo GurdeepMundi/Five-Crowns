@@ -25,7 +25,7 @@ class PlayerModel {
   std::string getname();
   /**This function can be used to get the player's hand
   */
-  DeckModel getHand();
+  DeckModel* getHand();
   /**This function adds points to the players score
   *@param s this will be the player's added points
   */
@@ -70,7 +70,7 @@ class PlayerModel {
   /**
   *@ Vector this is player's hand (bunch of cards)
   */
-  DeckModel hand;
+  DeckModel* hand;
   /**
   *@ variable score is used to track accumulated score
   */

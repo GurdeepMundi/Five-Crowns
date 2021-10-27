@@ -20,7 +20,7 @@ std::string PlayerModel::getname() {
   return this->name;
 }
 
-DeckModel PlayerModel::getHand() {
+DeckModel* PlayerModel::getHand() {
   return this->hand;
 }
 
@@ -29,7 +29,7 @@ void PlayerModel::addScore(int s) {
 }
 
 void PlayerModel::discard(int d) {
-  hand.removeCard(d);
+  hand->removeCard(d);
 }
 
 // void PlayerModel::sort() {
@@ -37,7 +37,7 @@ void PlayerModel::discard(int d) {
 // }
 
 void PlayerModel::draw(CardModel* c) {
-  hand.addCard(c);
+  hand->addCard(c);
 }
 
 void PlayerModel::makeRun(std::vector<int> cardAddresses) {
@@ -46,7 +46,7 @@ void PlayerModel::makeRun(std::vector<int> cardAddresses) {
     //affect cards at the front
     std::sort(cardAddresses.begin(), cardAddresses.end(), std::greater<int>());
     for (int ob : cardAddresses) {
-      hand.removeCard(ob);
+      hand->removeCard(ob);
     }
   }
 }
@@ -57,7 +57,7 @@ void PlayerModel::makeBook(std::vector<int> cardAddresses) {
     //affect cards at the front
     std::sort(cardAddresses.begin(), cardAddresses.end(), std::greater<int>());
     for (int ob : cardAddresses) {
-      hand.removeCard(ob);
+      hand->removeCard(ob);
     }
   }
 }
@@ -69,7 +69,7 @@ bool PlayerModel::isValidRun(std::vector<int> cardAddresses) {
   std::vector <CardModel*> cardsUnderInspection;
   //populating the vector cardsUnderInspection
   for (int ob : cardAddresses) {
-    cardsUnderInspection.push_back(hand.getCardAt(ob));
+    cardsUnderInspection.push_back(hand->getCardAt(ob));
   }
   //sorting the vector by rank to support further operations
   for (int i = 0; i < cardsUnderInspection.size()-1; i++) {
@@ -114,7 +114,7 @@ bool PlayerModel::isValidBook(std::vector<int> cardAddresses) {
   std::vector <CardModel*> cardsUnderInspection;
   //populating the vector cardsUnderInspection
   for (int ob : cardAddresses) {
-    cardsUnderInspection.push_back(hand.getCardAt(ob));
+    cardsUnderInspection.push_back(hand->getCardAt(ob));
   }
   // checking if the book is possible to be made
   for (int i = 0; i < cardAddresses.size() -1; i++) {

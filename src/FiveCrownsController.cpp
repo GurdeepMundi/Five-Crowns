@@ -50,6 +50,7 @@ void FiveCrownsController::MakeDeck() {
     tempCard->setRank(50);
     tempCard->setSuit(CLUBS);
     tempCard->setScoreValue(50);
+    deck->addCard(tempCard);
   }
   delete tempCard;
 }
@@ -59,7 +60,6 @@ void FiveCrownsController::setUpGame() {
   Players.at(0)->setName(currentView->askForUserName());
   MakeDeck();
   MakeDeck();
-  deck->shuffle();
 }
 
 void FiveCrownsController::dealCards(int roundNumber) {
@@ -76,6 +76,7 @@ void FiveCrownsController::callHelp() {
 }
 
 void FiveCrownsController::PlayRound(int roundNumber) {
+  deck->shuffle();
   dealCards(roundNumber);
   if (currentView->askDraw() == 1) {
     Players.at(0)->draw(deck->getTopCard());
@@ -103,6 +104,17 @@ void FiveCrownsController::PlayRound(int roundNumber) {
   }
 }
 
-void FiveCrownsController::calcScore(int roundNumber) {}
+void FiveCrownsController::calcScore() {
+  int pScore = 0;
+  int cScore = 0;
+  for (int i = 0; i < (Players.at(0)->getHand()->getSize()); i++) {
+    pScore = pScore + (Players.at(0)->getHand()->getCardAt(i)->getScoreValue());
+  }
+  Players.at(0)->addScore(pScore);
+  for (int j = 0; j < (Players.at(1)->getHand()->getSize()); j++) {
+    cScore = cScore + (Players.at(1)->getHand()->getCardAt(j)->getScoreValue());
+  }
+  Players.at(1)->addScore(cScore);
+}
 
 void FiveCrownsController::playGame() {}

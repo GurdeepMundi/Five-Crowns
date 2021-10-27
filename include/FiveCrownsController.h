@@ -41,7 +41,7 @@ class FiveCrownsController {
   * @ param roundNumber is used and will be taken into consideration
   * when determining the players score.
   */
-  void calcScore(int roundNumber);
+  void calcScore();
   /**
   * This function loops through the game 11 times.
   */

@@ -34,6 +34,10 @@ class DeckModel {
   *\returns card stored at the top of the deck (or at the end of vector)
   */
   CardModel* getTopCard();
+  /**
+  *\returns the size of the deck
+  */
+  int getSize();
 
  private:
 std::vector <CardModel*> deck;///will be used to store all the cards
