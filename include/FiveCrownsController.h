@@ -51,8 +51,6 @@ class FiveCrownsController {
   */
   void MakeDeck();
 
-  void printDeck();
-
  private:
   InterfaceUI * currentView = new InterfaceUI();
   /**

@@ -54,18 +54,11 @@ void FiveCrownsController::MakeDeck() {
   delete tempCard;
 }
 
-void FiveCrownsController::printDeck() {
-  for(int i = 0; i < 58; i++) {
-    std::cout << deck->getCardAt(i)->getRank() << std::endl;
-  }
-}
-
 void FiveCrownsController::setUpGame() {
 //  currentView->WelcomeMessage();
   //Players.at(0)->setName(currentView->askForUserName());
   MakeDeck();
   MakeDeck();
-  printDeck();
 }
 
 void dealCards() {}
