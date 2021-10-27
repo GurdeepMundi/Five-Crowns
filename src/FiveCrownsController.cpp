@@ -6,6 +6,7 @@
 */
 #include <FiveCrownsController.h>
 #include <CardModel.h>
+#include <DeckModel.h>
 
 void FiveCrownsController::endGame() {
   exit(0);
@@ -50,13 +51,21 @@ void FiveCrownsController::MakeDeck() {
     tempCard->setSuit(CLUBS);
     tempCard->setScoreValue(50);
   }
+  delete tempCard;
+}
+
+void FiveCrownsController::printDeck() {
+  for(int i = 0; i < 58; i++) {
+    std::cout << deck->getCardAt(i)->getRank() << std::endl;
+  }
 }
 
 void FiveCrownsController::setUpGame() {
-  currentView->WelcomeMessage();
-  Players.at(0)->setName(currentView->askForUserName());
+//  currentView->WelcomeMessage();
+  //Players.at(0)->setName(currentView->askForUserName());
   MakeDeck();
   MakeDeck();
+  printDeck();
 }
 
 void dealCards() {}
@@ -64,6 +73,7 @@ void dealCards() {}
 void callHelp() {
   UserModel* temp = new UserModel();
   temp->help();
+  delete temp;
 }
 
 void FiveCrownsController::PlayRound(int roundNumber) {}

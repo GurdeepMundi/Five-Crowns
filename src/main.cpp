@@ -10,5 +10,8 @@ int main(int argc, char **argv) {
   FiveCrownsController A; //= new FiveCrownsController();
   InterfaceUI* aView = new InterfaceUI();
   A.setUpGame();
+
+  delete aView;
+
   return 0;
 }

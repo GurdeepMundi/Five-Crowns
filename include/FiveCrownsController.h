@@ -13,6 +13,7 @@
 #include <PlayerModel.h>
 #include <UserModel.h>
 #include <InterfaceUI.h>
+#include <DeckModel.h>
 
 class FiveCrownsController {
  public:
@@ -49,6 +50,8 @@ class FiveCrownsController {
   * This function implements the deck
   */
   void MakeDeck();
+
+  void printDeck();
 
  private:
   InterfaceUI * currentView = new InterfaceUI();
