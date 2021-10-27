@@ -64,8 +64,8 @@ void FiveCrownsController::setUpGame() {
 
 void FiveCrownsController::dealCards(int roundNumber) {
   for(int i = 0; i < roundNumber + 2; i++) {
-    Players.at(0)->draw(deck.at(0));
-    Players.at(1)->draw(deck.at(1));
+    Players.at(0)->draw(deck->getCardAt(0));
+    Players.at(1)->draw(deck->getCardAt(1));
     deck->removeCard(0);
     deck->removeCard(1);
   }
