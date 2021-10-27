@@ -36,7 +36,7 @@ class FiveCrownsController {
   /** This function is used to play a round in the game.
   * @ param roundNumber is used to keep track of the rounds.
   */
-  void PlayRound(int roundNumber);
+  void playRound(int roundNumber);
   /** This function is used to calculate score.
   * @ param roundNumber is used and will be taken into consideration
   * when determining the players score.
@@ -49,7 +49,7 @@ class FiveCrownsController {
   /**
   * This function implements the deck
   */
-  void MakeDeck();
+  void makeDeck();
 
  private:
   InterfaceUI * currentView = new InterfaceUI();

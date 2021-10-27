@@ -12,7 +12,7 @@ void FiveCrownsController::endGame() {
   exit(0);
 }
 
-void FiveCrownsController::MakeDeck() {
+void FiveCrownsController::makeDeck() {
   CardModel* tempCard = new CardModel();
   //enum Suits {CLUBS, HEARTS, SPADES, DIAMONDS, STARS};
   //Suits Object;
@@ -58,8 +58,8 @@ void FiveCrownsController::MakeDeck() {
 void FiveCrownsController::setUpGame() {
   currentView->WelcomeMessage();
   Players.at(0)->setName(currentView->askForUserName());
-  MakeDeck();
-  MakeDeck();
+  makeDeck();
+  makeDeck();
 }
 
 void FiveCrownsController::dealCards(int roundNumber) {
@@ -75,32 +75,44 @@ void FiveCrownsController::callHelp() {
   currentView->help();
 }
 
-void FiveCrownsController::PlayRound(int roundNumber) {
+void FiveCrownsController::playRound(int roundNumber) {
+  int drawChoice;
+  int choice;
   deck->shuffle();
   dealCards(roundNumber);
-  if (currentView->askDraw() == 1) {
-    Players.at(0)->draw(deck->getTopCard());
-  } else if (currentView->askDraw() == 2) {
-      Players.at(0)->draw(discardPile->getTopCard());
-    }
-
-  switch (currentView->askChoice()) {
-    case 1:
-    //discard
-    Players.at(0)->discard(currentView->askDiscard());
-    break;
-    case 2:
-    // make run
-    Players.at(0)->makeRun(currentView->askRun());
-    break;
-    case 3:
-    // make Book
-    Players.at(0)->makeBook(currentView->askBook());
-    break;
-    case 4:
-    // help
-    callHelp();
-    break;
+  // turn loop
+  while (Players.at(0)->getHand()->getSize() >= 1 && \
+  Players.at(1)->getHand()->getSize() >= 1) {
+    drawChoice = currentView->askDraw();
+    if (drawChoice == 1) {
+      Players.at(0)->draw(deck->getTopCard());
+      deck->removeCard(deck->getSize()-1);
+    } else if (drawChoice == 2) {
+        Players.at(0)->draw(discardPile->getTopCard());
+      }
+      // turn only ends when card is discardeds
+      do {
+        choice = currentView->askChoice();
+        switch (choice) {
+        case 1:
+        //discard
+        Players.at(0)->discard(currentView->askDiscard());
+        break;
+        case 2:
+        // make run
+        Players.at(0)->makeRun(currentView->askRun());
+        break;
+        case 3:
+        // make Book
+        Players.at(0)->makeBook(currentView->askBook());
+        break;
+        case 4:
+        // help
+        callHelp();
+        break;
+      }
+    } while (choice != 1);
+    // AI turn
   }
 }
 
