@@ -9,6 +9,7 @@
 #include <DeckModel.h>
 
 void FiveCrownsController::endGame() {
+  currentView->byeMessage();
   exit(0);
 }
 
@@ -42,6 +43,7 @@ void FiveCrownsController::makeDeck() {
       }
       tempCard->setRank(i);
       tempCard->setScoreValue(i);
+      tempCard->setWildStatus(false);
       deck->addCard(tempCard);
     }
   }
@@ -50,6 +52,7 @@ void FiveCrownsController::makeDeck() {
     tempCard->setRank(50);
     tempCard->setSuit(CLUBS);
     tempCard->setScoreValue(50);
+    tempCard->setWildStatus(true);
     deck->addCard(tempCard);
   }
   delete tempCard;
@@ -58,8 +61,6 @@ void FiveCrownsController::makeDeck() {
 void FiveCrownsController::setUpGame() {
   currentView->WelcomeMessage();
   Players.at(0)->setName(currentView->askForUserName());
-  makeDeck();
-  makeDeck();
 }
 
 void FiveCrownsController::dealCards(int roundNumber) {
@@ -79,6 +80,9 @@ void FiveCrownsController::playRound(int roundNumber) {
   int drawChoice;
   int choice;
   int discardChoice;
+  makeDeck();
+  makeDeck();
+  deck->setWild(roundNumber);
   deck->shuffle();
   dealCards(roundNumber);
   discardPile->addCard(deck->getTopCard());
@@ -120,6 +124,11 @@ void FiveCrownsController::playRound(int roundNumber) {
     } while (choice != 1);
     // AI turn
   }
+  calcScore();
+  deck->emptyDeck();
+  discardPile->emptyDeck();
+  Players.at(0)->getHand()->emptyDeck();
+  Players.at(1)->getHand()->emptyDeck();
 }
 
 void FiveCrownsController::calcScore() {
@@ -135,4 +144,10 @@ void FiveCrownsController::calcScore() {
   Players.at(1)->addScore(cScore);
 }
 
-void FiveCrownsController::playGame() {}
+void FiveCrownsController::playGame() {
+  setUpGame();
+  for (int i = 1; i < 12; i++) {
+    playRound(i);
+  }
+  endGame();
+}
