@@ -31,7 +31,9 @@ void DeckModel::addCard(CardModel* c) {
 }
 
 void DeckModel::removeCard(int p) {
-  if (p == deck.size()-1) {
+  if (deck.size() == 0) {
+    break;
+  } else if (p == deck.size()-1) {
     deck.pop_back();
   } else {
     for (int i = p; i < (deck.size()); i++) {
