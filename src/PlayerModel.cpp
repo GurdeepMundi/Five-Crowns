@@ -27,15 +27,9 @@ DeckModel* PlayerModel::getHand() {
 void PlayerModel::addScore(int s) {
   this->score = this->score + s;
 }
-
-void PlayerModel::discard(int d) {
-  hand->removeCard(d-1);
-}
-
 // void PlayerModel::sort() {
 //  // code here😏
 // }
-
 void PlayerModel::draw(CardModel* c) {
   hand->addCard(c);
 }

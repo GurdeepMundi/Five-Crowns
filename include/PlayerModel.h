@@ -65,8 +65,7 @@ class PlayerModel {
   */
   bool isValidBook(std::vector<int> cardAddresses);
 
- private:
-  std::vector <CardModel*> deck;
+ protected:
   /**
   *@ Vector this is player's hand (bunch of cards)
   */

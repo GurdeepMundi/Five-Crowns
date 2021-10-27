@@ -77,8 +77,9 @@ void FiveCrownsController::callHelp() {
 }
 
 void FiveCrownsController::playRound(int roundNumber) {
-  int drawChoice;
-  int choice;
+  int drawChoice;// discard pile or draw pile
+  int choice;//will be used to store if user wants to 1. discard,
+  //2. make run, 3. make book, 4. seek help
   int discardChoice;
   makeDeck();
   makeDeck();
