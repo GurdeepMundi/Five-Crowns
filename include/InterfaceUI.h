@@ -59,5 +59,14 @@ class InterfaceUI {
   * This function displays a goodbye message to the user.
   */
   void byeMessage();
+  /**
+  * This function is used by the user when they require help
+  */
+  void help();
+  /**
+  * This function is used to ask the user to
+  * draw from discard pile or draw pile.
+  */
+  int askDraw();
 };
 #endif

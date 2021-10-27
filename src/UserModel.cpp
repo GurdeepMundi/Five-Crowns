@@ -8,10 +8,6 @@
 #include <UserModel.h>
 #include <iostream>
 
-void UserModel::help() {
-  std::cout << "Here are the Rules of the Game" << std::endl;
-}
-
 void UserModel::discard(int d) {
   // code here
 }
