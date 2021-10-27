@@ -6,6 +6,7 @@
 */
 #ifndef AIMODEL_H
 #define AIMODEL_H
+#include<PlayerModel.h>
 class AIModel: public PlayerModel {
   /** This function is used to discard a card from user's hand
   *@param d address of the card in hand
