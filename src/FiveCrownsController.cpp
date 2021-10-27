@@ -77,11 +77,12 @@ void FiveCrownsController::callHelp() {
 
 void FiveCrownsController::PlayRound(int roundNumber) {
   dealCards(roundNumber);
-  if(currentView->askDraw() == 1) {
-  Players.at(0)->draw(deck->getTopCard());
-} else if(currentView->askDraw() == 2) {
-  Players.at(0)->draw(discardPile->getTopCard());
-}
+  if (currentView->askDraw() == 1) {
+    Players.at(0)->draw(deck->getTopCard());
+  } else if (currentView->askDraw() == 2) {
+      Players.at(0)->draw(discardPile->getTopCard());
+    }
+
   switch (currentView->askChoice()) {
     case 1:
     //discard

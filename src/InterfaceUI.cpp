@@ -124,6 +124,6 @@ int InterfaceUI::askDraw() {
   int input;
   std::cout << "Do you want to draw from the draw pile (1)"
   << " or discard pile (2) ? " << std::endl;
-  cin>>input;
+  std::cin >>input;
   return input;
 }
