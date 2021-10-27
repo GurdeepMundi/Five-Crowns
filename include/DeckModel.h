@@ -22,7 +22,7 @@ class DeckModel {
   */
   void addCard(CardModel* c);
   /**this function can be used to remove a card from the deck
-  *@param c the card to be removed
+  *@param p the card to be removed
   */
   void removeCard(int p);
   /**this function can be used to empty the deck
@@ -41,6 +41,10 @@ class DeckModel {
   *\returns the size of the deck
   */
   int getSize();
+  /**this function is used to set all the wild cards for the round
+  *@param roundNumber the round corresponding to the wild cards
+  */
+  void setWild(int roundNumber);
 
  private:
 std::vector <CardModel*> deck;///will be used to store all the cards
