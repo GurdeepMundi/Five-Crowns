@@ -31,10 +31,20 @@ void DeckModel::addCard(CardModel* c) {
 }
 
 void DeckModel::removeCard(int p) {
-  for (int i = p; i < (deck.size()); i++) {
-    deck[i] = deck[i+1];
+  if (p == deck.size()-1) {
+    deck.pop_back();
+  } else {
+    for (int i = p; i < (deck.size()); i++) {
+      deck[i] = deck[i+1];
+    }
+    deck.pop_back();
   }
-  deck.pop_back();
+}
+
+void DeckModel::emptyDeck() {
+  for (int i = 0; i < (deck.size()); i++) {
+    removeCard(i);
+  }
 }
 
 CardModel* DeckModel::getCardAt(int cardAddress) {

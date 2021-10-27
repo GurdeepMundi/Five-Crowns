@@ -25,6 +25,9 @@ class DeckModel {
   *@param c the card to be removed
   */
   void removeCard(int p);
+  /**this function can be used to empty the deck
+  */
+  void emptyDeck();
   /**
   *\returns card stored at the given address in the deck
   *@param cardAddress the address from which the card needs to be retrieved
