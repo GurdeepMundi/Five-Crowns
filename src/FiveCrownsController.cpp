@@ -72,12 +72,31 @@ void FiveCrownsController::dealCards(int roundNumber) {
 }
 
 void callHelp() {
-  UserModel* temp = new UserModel();
-  temp->help();
-  delete temp;
+  currentView->help();
 }
 
-void FiveCrownsController::PlayRound(int roundNumber) {}
+void FiveCrownsController::PlayRound(int roundNumber) {
+  dealCards(roundNumber);
+  Players.at(0)->draw(currentView->askDraw());
+  switch (currentView->askChoice()) {
+    case 1:
+    //discard
+    Players.at(0)->discard(currentView->askDiscard());
+    break;
+    case 2:
+    // make run
+    Players.at(0)->makeRun(currentView->askRun());
+    break;
+    case 3:
+    // make Book
+    Players.at(0)->makeBook(currentView->askBook());
+    break;
+    case 4:
+    // help
+    callHelp();
+    break;
+  }
+}
 
 void FiveCrownsController::calcScore(int roundNumber) {}
 
