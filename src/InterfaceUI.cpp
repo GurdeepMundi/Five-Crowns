@@ -9,10 +9,6 @@
 #include <string>
 #include <vector>
 
-InterfaceUI::InterfaceUI() {
-  std::cout << "I workd";
-}
-
 std::string InterfaceUI::askForUserName() {
   std::string UserName;
   std::cout << "Please Enter Your Name:" << std::endl;

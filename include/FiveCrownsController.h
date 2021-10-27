@@ -28,7 +28,7 @@ class FiveCrownsController {
   /**
   * This function is used to dealCards in the game.
   */
-  void dealCards();
+  void dealCards(int roundNumber);
   /**
   * This function is called when the user requires assitance with the game.
   */

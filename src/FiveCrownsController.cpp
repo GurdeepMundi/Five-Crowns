@@ -55,13 +55,21 @@ void FiveCrownsController::MakeDeck() {
 }
 
 void FiveCrownsController::setUpGame() {
-//  currentView->WelcomeMessage();
-  //Players.at(0)->setName(currentView->askForUserName());
+  currentView->WelcomeMessage();
+  Players.at(0)->setName(currentView->askForUserName());
   MakeDeck();
   MakeDeck();
+  deck->shuffle();
 }
 
-void dealCards() {}
+void FiveCrownsController::dealCards(int roundNumber) {
+  for(int i = 0; i < roundNumber + 2; i++) {
+    Players.at(0)->draw(deck.at(0));
+    Players.at(1)->draw(deck.at(1));
+    deck->removeCard(0);
+    deck->removeCard(1);
+  }
+}
 
 void callHelp() {
   UserModel* temp = new UserModel();
