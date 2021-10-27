@@ -9,8 +9,8 @@
 #include <PlayerModel.h>
 class UserModel: public PlayerModel {
  public:
-  /** This function is used to discard.
-  *@param d
+  /** This function is used to discard a card from user's hand
+  *@param d address of the card in hand
   */
   void discard(int d);
 };
