@@ -6,7 +6,6 @@
 */
 
 #include <UserModel.h>
-#include <iostream>
 
 void UserModel::discard(int d) {
     hand->removeCard(d-1);
