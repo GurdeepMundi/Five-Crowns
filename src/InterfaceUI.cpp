@@ -94,6 +94,10 @@ void InterfaceUI::displayMenu() {
   int input;
   WelcomeMessage();
   std::cout << "Enter (1) to access the rules of the same" << std::endl;
+  std::cout << "Enter (2) to exit the game" << std::endl;
+  if (input == '1') {
+    displayHelp();
+  }
 }
 
 void InterfaceUI::displayState() {}
