@@ -129,6 +129,9 @@ void FiveCrownsController::playRound(int roundNumber) {
         // help
         callHelp();
         break;
+        case 5:
+        endGame();
+        break;
       }
     } while (choice != 1);
     // AI turn
