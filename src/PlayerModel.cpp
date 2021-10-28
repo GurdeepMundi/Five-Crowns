@@ -93,30 +93,30 @@ bool PlayerModel::isValidRun(std::vector<int> cardAddresses) {
   //checking if the run is possible
   for (int i = 0; i < cardAddresses.size() -1; i++) {
     if ((cardsUnderInspection.at(i)->getSuit() != \
-       cardsUnderInspection.at(i+1)->getSuit()) || \
-       (cardsUnderInspection.at(i)->getRank() != \
-       cardsUnderInspection.at(i+1)->getRank())) {
-         if (wildCards < 1) {
-           // if next card is invalid and no wilds, return false
-           return false;
-         } else {
-           // if next card is invalid and there are wilds,
-           // make the next card in the run,
-           // insert it before the next and remove a wild card
-           CardModel* temp;
-           temp->setRank(cardsUnderInspection.at(i)->getRank()+1);
-           temp->setSuit(cardsUnderInspection.at(i)->getSuit());
-           temp->setScoreValue(cardsUnderInspection.at(i)->getScoreValue()+1);
-           temp->setWildStatus(false);
-           cardsUnderInspection.insert(cardsUnderInspection.begin()+i+1, temp);
-           cardsUnderInspection.pop_back();
-           delete temp;
-           wildCards = wildCards - 1;
-         }
-       } else {}
-     }
-     return true;
-   }
+    cardsUnderInspection.at(i+1)->getSuit()) || \
+    (cardsUnderInspection.at(i)->getRank() != \
+    cardsUnderInspection.at(i+1)->getRank())) {
+      if (wildCards < 1) {
+        // if next card is invalid and no wilds, return false
+        return false;
+      } else {
+        // if next card is invalid and there are wilds,
+        // make the next card in the run,
+        // insert it before the next and remove a wild card
+        CardModel* temp;
+        temp->setRank(cardsUnderInspection.at(i)->getRank()+1);
+        temp->setSuit(cardsUnderInspection.at(i)->getSuit());
+        temp->setScoreValue(cardsUnderInspection.at(i)->getScoreValue()+1);
+        temp->setWildStatus(false);
+        cardsUnderInspection.insert(cardsUnderInspection.begin()+i+1, temp);
+        cardsUnderInspection.pop_back();
+        delete temp;
+        wildCards = wildCards - 1;
+      }
+    } else {}
+  }
+  return true;
+}
 
 bool PlayerModel::isValidBook(std::vector<int> cardAddresses) {
   //this vector will be containing the cards that the user wants to lay
