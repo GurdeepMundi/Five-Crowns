@@ -93,6 +93,7 @@ void FiveCrownsController::playRound(int roundNumber) {
   deck->shuffle();
   dealCards(roundNumber);
   discardPile->addCard(deck->getTopCard());
+  currentView->displayDiscard(discardPile->getTopCard());
   deck->removeCard(deck->getSize()-1);
   // turn loop
   while (Players.at(0)->getHand()->getSize() >= 1 && \

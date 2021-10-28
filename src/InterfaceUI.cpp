@@ -177,3 +177,30 @@ void InterfaceUI::showHand(DeckModel* h) {
   }
   std::cout << std::endl;
 }
+
+void InterfaceUI::displayDiscard(CardModel* t) {
+  switch (t->getRank()) {
+    case 11: std::cout << "Jack";
+    break;
+    case 12: std::cout << "Queen";
+    break;
+    case 13: std::cout << "King";
+    break;
+    case 50: std::cout << "Joker";
+    default: std::cout << t->getRank();
+  }
+  std::cout << " of ";
+  switch (t->getSuit()) {
+    case 0: std::cout << "Clubs";
+    break;
+    case 1: std::cout << "Hearts";
+    break;
+    case 2: std::cout << "Spades";
+    break;
+    case 3: std::cout << "Diamonds";
+    break;
+    case 4: std::cout << "Stars";
+    break;
+  }
+  std::cout << " was discarded." << std::endl;
+}
