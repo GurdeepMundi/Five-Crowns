@@ -35,7 +35,7 @@ void PlayerModel::draw(CardModel* c) {
 }
 
 void PlayerModel::makeRun(std::vector<int> cardAddresses) {
-  if (isValidRun(cardAddresses)) {
+  if (dummyIsValidRun()) {
     //sorting the vector because removing the card higher in address doesn't
     //affect cards at the front
     std::sort(cardAddresses.begin(), cardAddresses.end(), std::greater<int>());
@@ -129,7 +129,7 @@ bool PlayerModel::isValidBook(std::vector<int> cardAddresses) {
   int cardRank;
   //populating the vector cardsUnderInspection
   for (int ob : cardAddresses) {
-    cardsUnderInspection.push_back(hand->getCardAt(ob-1));
+    cardsUnderInspection.push_back(hand->getCardAt(ob));
   }
   for (int i = 0; i < cardAddresses.size() ; i++) {
     if (cardsUnderInspection.at(i)->isWildStatus()) {

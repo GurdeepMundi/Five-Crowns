@@ -31,6 +31,7 @@ class DeckModel {
   /**
   *\returns card stored at the given address in the deck
   *@param cardAddress the address from which the card needs to be retrieved
+  * (0= first element)
   */
   CardModel* getCardAt(int cardAddress);
   /**

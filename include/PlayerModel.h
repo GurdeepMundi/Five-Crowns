@@ -64,6 +64,7 @@ class PlayerModel {
   * \returns true if the cards given meet requirements to make a book
   */
   bool isValidBook(std::vector<int> cardAddresses);
+  bool dummyIsValidRun() {return true;}
 
  protected:
   /**

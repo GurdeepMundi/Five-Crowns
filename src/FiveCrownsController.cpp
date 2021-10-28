@@ -99,7 +99,7 @@ void FiveCrownsController::playRound(int roundNumber) {
   Players.at(1)->getHand()->getSize() >= 1) {
     drawChoice = currentView->askDraw();
     if (drawChoice == 1) {
-      Players.at(0)->draw(deck->getTopCard());
+      Players.at(0)->draw(deck->getTopCard());//draw from Draw pile (deck)
       deck->removeCard(deck->getSize()-1);
     } else if (drawChoice == 2) {
         Players.at(0)->draw(discardPile->getTopCard());
@@ -114,7 +114,7 @@ void FiveCrownsController::playRound(int roundNumber) {
         discardChoice = currentView->askDiscard();
         discardPile->addCard(Players.at(0)->getHand()->getCardAt\
         (discardChoice));
-        //Players.at(0)->discard(discardChoice);
+        Players.at(0)->discard(discardChoice);
         break;
         case 2:
         // make run
@@ -133,17 +133,19 @@ void FiveCrownsController::playRound(int roundNumber) {
     // AI turn
     //draw from drawpile
     Players.at(1)->draw(deck->getTopCard());
+    deck->removeCard(deck->getSize()-1);
     //try making run
-    std::vector <int> tempVector = {1, 2, 3};
-    if (Players.at(1)->getHand()->getSize() > 2)
-    Players.at(1)->makeRun(tempVector);
+    std::vector <int> tempVector = {0,1,2};
+    if (Players.at(1)->getHand()->getSize() > 3) {
+      //Players.at(1)->makeRun(tempVector);
+    }
     //try making Book
-    if (Players.at(1)->getHand()->getSize() > 2) {
-      Players.at(1)->makeBook(tempVector);
+    if (Players.at(1)->getHand()->getSize() > 3) {
+      //Players.at(1)->makeBook(tempVector);
     }
     //Discarding a card from AIPlayer
-    discardPile->addCard(Players.at(1)->getHand()->getCardAt(1));
-    Players.at(1)->discard(1);
+    discardPile->addCard(Players.at(1)->getHand()->getCardAt(0));
+    Players.at(1)->discard(0);
   }
   calcScore();
   deck->emptyDeck();
