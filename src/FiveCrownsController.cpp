@@ -112,7 +112,8 @@ void FiveCrownsController::playRound(int roundNumber) {
         case 1:
         //discard
         discardChoice = currentView->askDiscard();
-        discardPile->addCard(Players.at(0)->getHand()->getCardAt(discardChoice));
+        discardPile->addCard(Players.at(0)->getHand()->getCardAt\
+        (discardChoice));
         //Players.at(0)->discard(discardChoice);
         break;
         case 2:
