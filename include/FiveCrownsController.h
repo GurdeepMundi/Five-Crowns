@@ -50,11 +50,15 @@ class FiveCrownsController {
   * This function implements the deck
   */
   void makeDeck();
+  /** this function can be used to set the current view
+  * @ param ui pointer to an InterfaceUI type object
+  */
+  void setUI(InterfaceUI* ui);
 
  private:
-  InterfaceUI * currentView = new InterfaceUI();
+  InterfaceUI * currentView;
   /**
-  * @ param roundNumber is used to keep track of the rounds.
+  * roundNumber is used to keep track of the rounds.
   */
   int roundNumber;
   /**
