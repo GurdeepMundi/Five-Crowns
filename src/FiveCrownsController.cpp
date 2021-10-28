@@ -166,3 +166,7 @@ void FiveCrownsController::playGame() {
   }
   endGame();
 }
+
+void FiveCrownsController::setUI(InterfaceUI* ui) {
+  currentView = ui;
+}
