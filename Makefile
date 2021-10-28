@@ -28,6 +28,9 @@ PROGRAM_TEST = testGame
 %.o: %.cpp
 	$(CXX) $(CXXFLAGS) -c $< -o $@
 
+.PHONY: clean
+clean:
+	rm -rf *~ $(SRC)/*.o	$(PROGRAM)
 
 $(PROGRAM): $(SRCS)
 	$(CXX) $(CXXFLAGS) -o $(PROGRAM) -I $(SRC_INCLUDE) $(SRCS) $(LINKFLAGS)
