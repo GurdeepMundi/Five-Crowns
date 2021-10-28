@@ -88,6 +88,7 @@ bool InterfaceUI::askGoOut() {
       std::cout << "Invalid Input" << std::endl;
     }
   } while (c != 'y' && c != 'Y' && c != 'n' && c != 'N');
+  return false;
 }
 
 void InterfaceUI::displayState() {}
