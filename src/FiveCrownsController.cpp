@@ -7,6 +7,7 @@
 #include <FiveCrownsController.h>
 #include <CardModel.h>
 #include <DeckModel.h>
+#include <vector>
 
 void FiveCrownsController::endGame() {
   currentView->byeMessage();
@@ -124,6 +125,19 @@ void FiveCrownsController::playRound(int roundNumber) {
       }
     } while (choice != 1);
     // AI turn
+    //draw from drawpile
+    Players.at(1)->draw(deck->getTopCard());
+    //try making run
+    std::vector <int> tempVector = {1, 2, 3};
+    if (Players.at(1)->getHand()->getSize() > 2)
+    Players.at(1)->makeRun(tempVector);
+    //try making Book
+    if (Players.at(1)->getHand()->getSize() > 2) {
+      Players.at(1)->makeBook(tempVector);
+    }
+    //Discarding a card from AIPlayer
+    discardPile->addCard(Players.at(1)->getHand()->getCardAt(1));
+    Players.at(1)->getHand()->removeCard(1);  
   }
   calcScore();
   deck->emptyDeck();
