@@ -159,7 +159,7 @@ void InterfaceUI::showHand(DeckModel* h) {
       break;
       case 50: std::cout << "Joker";
       default: std::cout << h->getCardAt(i)->getRank();
-    };
+    }
     std::cout << " of ";
     switch (h->getCardAt(i)->getSuit()) {
       case 0: std::cout << "Clubs";
@@ -172,7 +172,7 @@ void InterfaceUI::showHand(DeckModel* h) {
       break;
       case 4: std::cout << "Stars";
       break;
-    };
+    }
     std::cout << std::endl;
   }
   std::cout << std::endl;
