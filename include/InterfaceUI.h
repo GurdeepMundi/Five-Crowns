@@ -44,10 +44,6 @@ class InterfaceUI {
   */
   bool askGoOut();
   /**
-  * This function displays the game menu to the user.
-  */
-  void displayMenu();
-  /**
   * This function displays the state of the game to the user.
   */
   void displayState();
@@ -59,10 +55,6 @@ class InterfaceUI {
   * This function displays a goodbye message to the user.
   */
   void byeMessage();
-  /**
-  * This function is used by the user when they require help
-  */
-  void help();
   /**
   * This function is used to ask the user to
   * draw from discard pile or draw pile.

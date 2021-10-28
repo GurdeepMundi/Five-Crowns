@@ -79,7 +79,7 @@ void FiveCrownsController::dealCards(int roundNumber) {
 }
 
 void FiveCrownsController::callHelp() {
-  currentView->help();
+  currentView->displayHelp();
 }
 
 void FiveCrownsController::playRound(int roundNumber) {
@@ -130,6 +130,10 @@ void FiveCrownsController::playRound(int roundNumber) {
         case 4:
         // help
         callHelp();
+        break;
+        case 5:
+        // exit
+        endGame();
         break;
       }
     } while (choice != 1);

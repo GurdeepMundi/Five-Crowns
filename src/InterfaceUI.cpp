@@ -24,7 +24,7 @@ void InterfaceUI::WelcomeMessage() {
 int InterfaceUI::askChoice() {
   int choice;
   std::cout << "What would you like to do?\n" << \
-  "1 - Discard\n2 - Make Run\n3 - Make Book\n4 - Help" << std::endl;
+  "1 - Discard\n2 - Make Run\n3 - Make Book\n4 - Help - exit\n5" << std::endl;
   std::cin >> choice;
   return choice;
 }
@@ -90,8 +90,6 @@ bool InterfaceUI::askGoOut() {
   } while (c != 'y' && c != 'Y' && c != 'n' && c != 'N');
 }
 
-void InterfaceUI::displayMenu() {}
-
 void InterfaceUI::displayState() {}
 
 void InterfaceUI::displayHelp() {
@@ -127,10 +125,6 @@ void InterfaceUI::displayHelp() {
 void InterfaceUI::byeMessage() {
   // if endgame Function is called display this message
   std::cout << "Thank you for Playing! Goodbye!" << std::endl;
-}
-
-void InterfaceUI::help() {
-  std::cout << "Here are the Rules of the Game" << std::endl;
 }
 
 int InterfaceUI::askDraw() {
