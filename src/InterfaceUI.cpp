@@ -90,7 +90,11 @@ bool InterfaceUI::askGoOut() {
   } while (c != 'y' && c != 'Y' && c != 'n' && c != 'N');
 }
 
-void InterfaceUI::displayMenu() {}
+void InterfaceUI::displayMenu() {
+  int input;
+  WelcomeMessage();
+  std::cout << "Enter (1) to access the rules of the same" << std::endl;
+}
 
 void InterfaceUI::displayState() {}
 
