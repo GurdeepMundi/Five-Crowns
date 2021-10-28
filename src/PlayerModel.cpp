@@ -67,7 +67,7 @@ bool PlayerModel::isValidRun(std::vector<int> cardAddresses) {
   int wildCards = 0;
   //populating the vector cardsUnderInspection
   for (int ob : cardAddresses) {
-    cardsUnderInspection.push_back(hand->getCardAt(ob));
+    cardsUnderInspection.push_back(hand->getCardAt(ob-1));
   }
   //sorting the vector by scoreValue to support further operations and put
   //wild cards at the back
@@ -129,7 +129,7 @@ bool PlayerModel::isValidBook(std::vector<int> cardAddresses) {
   int cardRank;
   //populating the vector cardsUnderInspection
   for (int ob : cardAddresses) {
-    cardsUnderInspection.push_back(hand->getCardAt(ob));
+    cardsUnderInspection.push_back(hand->getCardAt(ob-1));
   }
   for (int i = 0; i < cardAddresses.size() ; i++) {
     if (cardsUnderInspection.at(i)->isWildStatus()) {
