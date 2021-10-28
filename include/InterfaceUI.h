@@ -72,5 +72,7 @@ class InterfaceUI {
   * This function is used to display hand of the user
   */
   void showHand(DeckModel* h);
+
+  void displayDiscard(CardModel* t);
 };
 #endif
