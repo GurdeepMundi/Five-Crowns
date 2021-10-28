@@ -48,7 +48,7 @@ std::vector<int> InterfaceUI::askRun() {
   } else {
     std::cout << "Please enter the position of the cards"
     " in your Run one by one:" << std::endl;
-    for (int i = 0; i <= runSize; i++) {
+    for (int i = 0; i < runSize; i++) {
       std::cin >> cardPos;
       run.push_back(cardPos);
     }
@@ -67,7 +67,7 @@ std::vector<int> InterfaceUI::askBook() {
   } else {
     std::cout << "Please enter the position of the cards"
     " in your Book one by one:" << std::endl;
-    for (int i = 0; i <= bookSize; i++) {
+    for (int i = 0; i < bookSize; i++) {
       std::cin >> cardPos;
       book.push_back(cardPos);
     }
