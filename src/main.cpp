@@ -11,8 +11,7 @@ int main(int argc, char **argv) {
   InterfaceUI* aView = new InterfaceUI();
   aGame->setUI(aView);
   aGame->playGame();
-
   delete aView;
-
+  delete aGame;
   return 0;
 }
