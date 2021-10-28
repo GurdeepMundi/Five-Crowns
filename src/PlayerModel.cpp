@@ -95,7 +95,7 @@ bool PlayerModel::isValidRun(std::vector<int> cardAddresses) {
     if ((cardsUnderInspection.at(i)->getSuit() != \
     cardsUnderInspection.at(i+1)->getSuit()) || \
     (cardsUnderInspection.at(i)->getRank() != \
-    cardsUnderInspection.at(i+1)->getRank())) {
+    cardsUnderInspection.at(i+1)->getRank()-1)) {
       if (wildCards < 1) {
         // if next card is invalid and no wilds, return false
         return false;
