@@ -22,7 +22,7 @@ class DeckModel {
   */
   void addCard(CardModel* c);
   /**this function can be used to remove a card from the deck
-  *@param p the card to be removed
+  *@param p the address of the card to be removed (0 = 1st element)
   */
   void removeCard(int p);
   /**this function can be used to empty the deck

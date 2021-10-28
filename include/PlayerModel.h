@@ -69,7 +69,7 @@ class PlayerModel {
   /**
   *@ Vector this is player's hand (bunch of cards)
   */
-  DeckModel* hand;
+  DeckModel* hand = new DeckModel();
   /**
   *@ variable score is used to track accumulated score
   */

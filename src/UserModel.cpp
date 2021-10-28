@@ -8,5 +8,5 @@
 #include <UserModel.h>
 
 void UserModel::discard(int d) {
-    hand->removeCard(d-1);
+    hand->removeCard(d);
 }

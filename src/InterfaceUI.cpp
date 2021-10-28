@@ -145,3 +145,35 @@ int InterfaceUI::askDraw() {
   } while (input != 1 && input != 2);
   return input;
 }
+
+void InterfaceUI::showHand(DeckModel* h) {
+  std::cout << std::endl << "Your hand looks like this: " << std::endl;
+  for (int i = 0; i < h->getSize(); i++) {
+    std::cout << i << " ";
+    switch (h->getCardAt(i)->getRank()) {
+      case 11: std::cout << "Jack";
+      break;
+      case 12: std::cout << "Queen";
+      break;
+      case 13: std::cout << "King";
+      break;
+      case 50: std::cout << "Joker";
+      default: std::cout << h->getCardAt(i)->getRank();
+    };
+    std::cout << " of ";
+    switch (h->getCardAt(i)->getSuit()) {
+      case 0: std::cout << "Clubs";
+      break;
+      case 1: std::cout << "Hearts";
+      break;
+      case 2: std::cout << "Spades";
+      break;
+      case 3: std::cout << "Diamonds";
+      break;
+      case 4: std::cout << "Stars";
+      break;
+    };
+    std::cout << std::endl;
+  }
+  std::cout << std::endl;
+}

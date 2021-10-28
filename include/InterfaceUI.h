@@ -68,5 +68,9 @@ class InterfaceUI {
   * draw from discard pile or draw pile.
   */
   int askDraw();
+  /**
+  * This function is used to display hand of the user
+  */
+  void showHand(DeckModel* h);
 };
 #endif

@@ -27,7 +27,7 @@ Suits CardModel::getSuit() {
 }
 
 int CardModel::getRank() {
-  return this->rank;
+  return rank;
 }
 
 void CardModel::setWildStatus(bool newStatus) {

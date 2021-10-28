@@ -8,6 +8,9 @@
 #include <CardModel.h>
 #include <DeckModel.h>
 #include <vector>
+#include <UserModel.h>
+#include <AIModel.h>
+#include <iostream>
 
 void FiveCrownsController::endGame() {
   currentView->byeMessage();
@@ -15,12 +18,10 @@ void FiveCrownsController::endGame() {
 }
 
 void FiveCrownsController::makeDeck() {
-  CardModel* tempCard = new CardModel();
-  //enum Suits {CLUBS, HEARTS, SPADES, DIAMONDS, STARS};
-  //Suits Object;
-
+  CardModel* tempCard;
   for (int i = 3; i < 14; i++) {
     for (int j = 1; j < 6; j++) {
+      tempCard = new CardModel();
       switch (j) {
         case 1:
         tempCard->setSuit(CLUBS);
@@ -49,7 +50,7 @@ void FiveCrownsController::makeDeck() {
     }
   }
   for (int k = 1; k < 4; k++) {
-    //Object = CLUBS;
+    tempCard = new CardModel();
     tempCard->setRank(50);
     tempCard->setSuit(CLUBS);
     tempCard->setScoreValue(50);
@@ -61,15 +62,19 @@ void FiveCrownsController::makeDeck() {
 
 void FiveCrownsController::setUpGame() {
   currentView->WelcomeMessage();
-  Players.at(0)->setName(currentView->askForUserName());
+  //Adding new Players in the Controller because only two players are allowed
+  Players.push_back(new UserModel());
+  Players.push_back(new AIModel());
+  Players.at(0)->setName("Gurdeep"/*currentView->askForUserName()*/);
+  Players.at(1)->setName("DumbAI");
 }
 
 void FiveCrownsController::dealCards(int roundNumber) {
   for (int i = 0; i < roundNumber + 2; i++) {
     Players.at(0)->draw(deck->getCardAt(0));
-    Players.at(1)->draw(deck->getCardAt(1));
     deck->removeCard(0);
-    deck->removeCard(1);
+    Players.at(1)->draw(deck->getCardAt(0));
+    deck->removeCard(0);
   }
 }
 
@@ -101,14 +106,14 @@ void FiveCrownsController::playRound(int roundNumber) {
       }
       // turn only ends when card is discarded
       do {
+        currentView->showHand(Players.at(0)->getHand());
         choice = currentView->askChoice();
         switch (choice) {
         case 1:
         //discard
         discardChoice = currentView->askDiscard();
-        discardPile->addCard(Players.at(0)->getHand() \
-        ->getCardAt(discardChoice-1));
-        Players.at(0)->discard(discardChoice);
+        discardPile->addCard(Players.at(0)->getHand()->getCardAt(discardChoice));
+        //Players.at(0)->discard(discardChoice);
         break;
         case 2:
         // make run

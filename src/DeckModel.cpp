@@ -7,6 +7,7 @@
 #include <DeckModel.h>
 #include <vector>
 #include <random>
+#include <iostream>
 DeckModel::DeckModel() {
   //constructor
 }
@@ -31,15 +32,7 @@ void DeckModel::addCard(CardModel* c) {
 }
 
 void DeckModel::removeCard(int p) {
-  if (deck.size() == 0) {
-  } else if (p == deck.size()-1) {
-    deck.pop_back();
-  } else {
-    for (int i = p; i < (deck.size()); i++) {
-      deck[i] = deck[i+1];
-    }
-    deck.pop_back();
-  }
+  deck.erase((deck.begin() + p));
 }
 
 void DeckModel::emptyDeck() {
@@ -53,7 +46,7 @@ CardModel* DeckModel::getCardAt(int cardAddress) {
 }
 
 CardModel* DeckModel::getTopCard() {
-  return deck.at(deck.size() - 1);
+  return deck.at(0);//this->getCardAt((this->getSize() - 2));
 }
 
 int DeckModel::getSize() {
