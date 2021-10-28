@@ -137,7 +137,7 @@ void FiveCrownsController::playRound(int roundNumber) {
     }
     //Discarding a card from AIPlayer
     discardPile->addCard(Players.at(1)->getHand()->getCardAt(1));
-    Players.at(1)->getHand()->removeCard(1);
+    Players.at(1)->discard(1);
   }
   calcScore();
   deck->emptyDeck();
