@@ -42,11 +42,11 @@ void DeckModel::emptyDeck() {
 }
 
 CardModel* DeckModel::getCardAt(int cardAddress) {
-  return deck.at(cardAddress);
+  return deck.at(cardAddress-1);
 }
 
 CardModel* DeckModel::getTopCard() {
-  return deck.at(0);//this->getCardAt((this->getSize() - 2));
+  return deck.back();//this->getCardAt((this->getSize() - 2));
 }
 
 int DeckModel::getSize() {
