@@ -27,6 +27,11 @@ DeckModel* PlayerModel::getHand() {
 void PlayerModel::addScore(int s) {
   this->score = this->score + s;
 }
+
+void PlayerModel::discard(int d) {
+  hand->removeCard(d-1);
+}
+
 // void PlayerModel::sort() {
 //  // code here😏
 // }
@@ -35,7 +40,7 @@ void PlayerModel::draw(CardModel* c) {
 }
 
 void PlayerModel::makeRun(std::vector<int> cardAddresses) {
-  if (dummyIsValidRun()) {
+  if (isValidRun(cardAddresses)) {
     //sorting the vector because removing the card higher in address doesn't
     //affect cards at the front
     std::sort(cardAddresses.begin(), cardAddresses.end(), std::greater<int>());
@@ -77,7 +82,7 @@ bool PlayerModel::isValidRun(std::vector<int> cardAddresses) {
       //compare with every card next to it
       if (cardsUnderInspection.at(i)->getScoreValue() > \
       cardsUnderInspection.at(j)->getScoreValue()) {
-        //swap if current card is smaller than next one
+        //swap if current card is greater than next one
         cardsUnderInspection.at(i) = cardsUnderInspection.at(j);
         cardsUnderInspection.at(j) = temp;
       }
