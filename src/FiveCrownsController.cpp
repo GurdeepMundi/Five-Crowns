@@ -136,7 +136,7 @@ void FiveCrownsController::playRound(int roundNumber) {
     Players.at(1)->draw(deck->getTopCard());
     deck->removeCard(deck->getSize()-1);
     //try making run
-    std::vector <int> tempVector = {0,1,2};
+    std::vector <int> tempVector = {0, 1, 2};
     if (Players.at(1)->getHand()->getSize() > 3) {
       //Players.at(1)->makeRun(tempVector);
     }
