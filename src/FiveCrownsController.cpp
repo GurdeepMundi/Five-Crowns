@@ -115,6 +115,8 @@ void FiveCrownsController::playRound(int roundNumber) {
         discardChoice = currentView->askDiscard();
         discardPile->addCard(Players.at(0)->getHand()->getCardAt\
         (discardChoice));
+        currentView->displayDiscard(Players.at(0)->getHand()->getCardAt\
+        (discardChoice));
         Players.at(0)->discard(discardChoice);
         break;
         case 2:
@@ -141,8 +143,8 @@ void FiveCrownsController::playRound(int roundNumber) {
       //Players.at(1)->makeRun(tempVector);
     }
     //try making Book
-    if (Players.at(1)->getHand()->getSize() > 3) {
-      //Players.at(1)->makeBook(tempVector);
+    if (Players.at(1)->getHand()->getSize() > 2) {
+      Players.at(1)->makeBook(tempVector);
     }
     //Discarding a card from AIPlayer
     discardPile->addCard(Players.at(1)->getHand()->getCardAt(0));
