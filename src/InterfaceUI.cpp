@@ -127,10 +127,6 @@ void InterfaceUI::byeMessage() {
   std::cout << "Thank you for Playing! Goodbye!" << std::endl;
 }
 
-void InterfaceUI::help() {
-  std::cout << "Here are the Rules of the Game" << std::endl;
-}
-
 int InterfaceUI::askDraw() {
   int input;
   do {
