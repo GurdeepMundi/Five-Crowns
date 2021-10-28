@@ -79,7 +79,7 @@ void FiveCrownsController::dealCards(int roundNumber) {
 }
 
 void FiveCrownsController::callHelp() {
-  currentView->help();
+  currentView->displayHelp();
 }
 
 void FiveCrownsController::playRound(int roundNumber) {
