@@ -178,7 +178,7 @@ void InterfaceUI::showHand(DeckModel* h) {
   std::cout << std::endl;
 }
 
-void InterfaceU::displayDiscard(CardModel* t) {
+void InterfaceUI::displayDiscard(CardModel* t) {
   switch (t->getRank()) {
     case 11: std::cout << "Jack";
     break;
