@@ -119,24 +119,33 @@ bool PlayerModel::isValidRun(std::vector<int> cardAddresses) {
 }
 
 bool PlayerModel::isValidBook(std::vector<int> cardAddresses) {
+  // makes sure book is atleast 3 cards
+  if (cardAddresses.size() < 3) {
+    return false;
+  }
   //this vector will be containing the cards that the user wants to lay
   //as a book
   std::vector <CardModel*> cardsUnderInspection;
+  int cardRank;
   //populating the vector cardsUnderInspection
   for (int ob : cardAddresses) {
     cardsUnderInspection.push_back(hand->getCardAt(ob));
   }
-  // checking if the book is possible to be made
-  for (int i = 0; i < cardAddresses.size() -1; i++) {
+  for (int i = 0; i < cardAddresses.size() ; i++) {
     if (cardsUnderInspection.at(i)->isWildStatus()) {
-      return true;
+      continue;
     } else {
-      if (cardsUnderInspection.at(i)->getRank() == \
-      cardsUnderInspection.at(i+1)->getRank()) {
-        return true;
-      } else {
-        return false;
-      }
+      cardRank = cardsUnderInspection.at(i)->getRank();
+      break;
     }
   }
+  // checking if the book is possible to be made
+  for (int i = 0; i < cardAddresses.size() ; i++) {
+    if ((cardsUnderInspection.at(i)->isWildStatus()) || \
+    (cardsUnderInspection.at(i)->getRank() == cardRank)) {
+    } else {
+      return false;
+    }
+  }
+  return true;
 }
