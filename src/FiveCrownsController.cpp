@@ -130,6 +130,7 @@ void FiveCrownsController::playRound(int roundNumber) {
         callHelp();
         break;
         case 5:
+        // exit
         endGame();
         break;
       }
