@@ -137,6 +137,7 @@ void FiveCrownsController::playRound(int roundNumber) {
         break;
       }
     } while (choice != 1);
+    choice = 0;
     // AI turn
     //draw from drawpile
     Players.at(1)->draw(deck->getTopCard());
@@ -151,12 +152,12 @@ void FiveCrownsController::playRound(int roundNumber) {
       Players.at(1)->makeBook(tempVector);
     }
     //Discarding a card from AIPlayer
-    discardPile->addCard(Players.at(1)->getHand()->getCardAt(1));
+    discardPile->addCard(Players.at(1)->getHand()->getCardAt(0));
     std::cout << "AI player: " << std::endl;
     currentView->displayCard(discardPile->getTopCard());
-    Players.at(1)->discard(1);
+    Players.at(1)->discard(0);
   }
-  calcScore();
+  //calcScore();
   deck->emptyDeck();
   discardPile->emptyDeck();
   Players.at(0)->getHand()->emptyDeck();
@@ -166,11 +167,11 @@ void FiveCrownsController::playRound(int roundNumber) {
 void FiveCrownsController::calcScore() {
   int pScore = 0;
   int cScore = 0;
-  for (int i = 0; i < (Players.at(0)->getHand()->getSize()); i++) {
+  for (int i = 0; i < (Players.at(0)->getHand()->getSize()-1); i++) {
     pScore = pScore + (Players.at(0)->getHand()->getCardAt(i)->getScoreValue());
   }
   Players.at(0)->addScore(pScore);
-  for (int j = 1; j <= (Players.at(1)->getHand()->getSize()); j++) {
+  for (int j = 0; j <= (Players.at(1)->getHand()->getSize()-1); j++) {
     cScore = cScore + (Players.at(1)->getHand()->getCardAt(j)->getScoreValue());
   }
   Players.at(1)->addScore(cScore);
