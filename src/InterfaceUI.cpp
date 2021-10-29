@@ -91,8 +91,6 @@ bool InterfaceUI::askGoOut() {
   return false;
 }
 
-void InterfaceUI::displayState() {}
-
 void InterfaceUI::displayHelp() {
   std::cout << "The objective of Five Crowns"
   << " is to finish with the lowest score at the end of 11 rounds.\n"
