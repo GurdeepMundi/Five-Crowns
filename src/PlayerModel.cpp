@@ -105,15 +105,15 @@ bool PlayerModel::isValidRun(std::vector<int> cardAddresses) {
         // if next card is invalid and there are wilds,
         // make the next card in the run,
         // insert it before the next and remove a wild card
-        CardModel* temp;
-        temp->setRank(cardsUnderInspection.at(i)->getRank()+1);
+        CardModel* temp = new CardModel();
+        temp->setRank((cardsUnderInspection.at(i)->getRank()+1));
         temp->setSuit(cardsUnderInspection.at(i)->getSuit());
         temp->setScoreValue(cardsUnderInspection.at(i)->getScoreValue()+1);
         temp->setWildStatus(false);
-        cardsUnderInspection.insert(cardsUnderInspection.begin()+i+1, temp);
+        cardsUnderInspection.insert(cardsUnderInspection.begin()+(i+1), temp);
         cardsUnderInspection.pop_back();
         delete temp;
-        wildCards = wildCards - 1;
+        wildCards--;
       }
     } else {}
   }
