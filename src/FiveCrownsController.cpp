@@ -143,6 +143,7 @@ void FiveCrownsController::playRound(int roundNumber) {
     Players.at(1)->draw(deck->getTopCard());
     deck->removeCard(deck->getSize());
     //try making Book
+    std::vector <int> tempVector = {1, 2, 3};
     if (Players.at(1)->getHand()->getSize() > 2) {
       Players.at(1)->makeBook(tempVector);
     }
