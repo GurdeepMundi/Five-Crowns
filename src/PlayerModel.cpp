@@ -32,9 +32,6 @@ void PlayerModel::discard(int d) {
   hand->removeCard(d);
 }
 
-// void PlayerModel::sort() {
-//  // code here😏
-// }
 void PlayerModel::draw(CardModel* c) {
   hand->addCard(c);
 }
