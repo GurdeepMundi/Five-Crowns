@@ -44,10 +44,6 @@ class InterfaceUI {
   */
   bool askGoOut();
   /**
-  * This function displays the state of the game to the user.
-  */
-  void displayState();
-  /**
   * This function displays how to play the game to the user.
   */
   void displayHelp();
@@ -64,7 +60,9 @@ class InterfaceUI {
   * This function is used to display hand of the user
   */
   void showHand(DeckModel* h);
-
+  /**
+  * This function is used to display the given card in text form
+  */
   void displayCard(CardModel* t);
 };
 #endif

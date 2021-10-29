@@ -36,9 +36,6 @@ void DeckModel::removeCard(int p) {
 }
 
 void DeckModel::emptyDeck() {
-  //for (int i = 1; i <= (deck.size()); i++) {
-  //  removeCard(i);
-  //}
   deck.clear();
 }
 
