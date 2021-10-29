@@ -71,10 +71,10 @@ void FiveCrownsController::setUpGame() {
 
 void FiveCrownsController::dealCards(int roundNumber) {
   for (int i = 0; i < roundNumber + 2; i++) {
-    Players.at(0)->draw(deck->getCardAt(0));
-    deck->removeCard(0);
-    Players.at(1)->draw(deck->getCardAt(0));
-    deck->removeCard(0);
+    Players.at(0)->draw(deck->getTopCard());
+    deck->removeCard(deck->getSize());
+    Players.at(1)->draw(deck->getTopCard());
+    deck->removeCard(deck->getSize());
   }
 }
 
@@ -93,7 +93,7 @@ void FiveCrownsController::playRound(int roundNumber) {
   deck->shuffle();
   dealCards(roundNumber);
   discardPile->addCard(deck->getTopCard());
-  currentView->displayDiscard(discardPile->getTopCard());
+  currentView->displayCard(discardPile->getTopCard());
   deck->removeCard(deck->getSize());
   // turn loop
   while (Players.at(0)->getHand()->getSize() >= 1 && \
@@ -115,7 +115,7 @@ void FiveCrownsController::playRound(int roundNumber) {
         discardChoice = currentView->askDiscard();
         discardPile->addCard(Players.at(0)->getHand()->getCardAt\
         (discardChoice));
-        currentView->displayDiscard(Players.at(0)->getHand()->getCardAt\
+        currentView->displayCard(Players.at(0)->getHand()->getCardAt\
         (discardChoice));
         Players.at(0)->discard(discardChoice);
         break;
@@ -140,9 +140,9 @@ void FiveCrownsController::playRound(int roundNumber) {
     // AI turn
     //draw from drawpile
     Players.at(1)->draw(deck->getTopCard());
-    deck->removeCard(deck->getSize()-1);
+    deck->removeCard(deck->getSize());
     //try making run
-    std::vector <int> tempVector = {0, 1, 2};
+    std::vector <int> tempVector = {1, 2, 3};
     if (Players.at(1)->getHand()->getSize() > 3) {
       //Players.at(1)->makeRun(tempVector);
     }
@@ -151,8 +151,8 @@ void FiveCrownsController::playRound(int roundNumber) {
       Players.at(1)->makeBook(tempVector);
     }
     //Discarding a card from AIPlayer
-    discardPile->addCard(Players.at(1)->getHand()->getCardAt(0));
-    currentView->displayDiscard(discardPile->getTopCard());
+    discardPile->addCard(Players.at(1)->getHand()->getCardAt(1));
+    currentView->displayCard(discardPile->getTopCard());
     Players.at(1)->discard(1);
   }
   calcScore();
@@ -165,11 +165,11 @@ void FiveCrownsController::playRound(int roundNumber) {
 void FiveCrownsController::calcScore() {
   int pScore = 0;
   int cScore = 0;
-  for (int i = 0; i < (Players.at(0)->getHand()->getSize()); i++) {
+  for (int i = 1; i <= (Players.at(0)->getHand()->getSize()); i++) {
     pScore = pScore + (Players.at(0)->getHand()->getCardAt(i)->getScoreValue());
   }
   Players.at(0)->addScore(pScore);
-  for (int j = 0; j < (Players.at(1)->getHand()->getSize()); j++) {
+  for (int j = 1; j <= (Players.at(1)->getHand()->getSize()); j++) {
     cScore = cScore + (Players.at(1)->getHand()->getCardAt(j)->getScoreValue());
   }
   Players.at(1)->addScore(cScore);

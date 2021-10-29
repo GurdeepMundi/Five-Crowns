@@ -32,13 +32,14 @@ void DeckModel::addCard(CardModel* c) {
 }
 
 void DeckModel::removeCard(int p) {
-  deck.erase((deck.begin() + p));
+  deck.erase((deck.begin() + p-1));
 }
 
 void DeckModel::emptyDeck() {
-  for (int i = 0; i < (deck.size()); i++) {
-    removeCard(i);
-  }
+  //for (int i = 1; i <= (deck.size()); i++) {
+  //  removeCard(i);
+  //}
+  deck.clear();
 }
 
 CardModel* DeckModel::getCardAt(int cardAddress) {

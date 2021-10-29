@@ -65,6 +65,6 @@ class InterfaceUI {
   */
   void showHand(DeckModel* h);
 
-  void displayDiscard(CardModel* t);
+  void displayCard(CardModel* t);
 };
 #endif

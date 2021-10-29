@@ -29,7 +29,7 @@ void PlayerModel::addScore(int s) {
 }
 
 void PlayerModel::discard(int d) {
-  hand->removeCard(d-1);
+  hand->removeCard(d);
 }
 
 // void PlayerModel::sort() {
@@ -45,7 +45,7 @@ void PlayerModel::makeRun(std::vector<int> cardAddresses) {
     //affect cards at the front
     std::sort(cardAddresses.begin(), cardAddresses.end(), std::greater<int>());
     for (int ob : cardAddresses) {
-      hand->removeCard(ob-1);
+      hand->removeCard(ob);
     }
   }
 }
@@ -56,7 +56,7 @@ void PlayerModel::makeBook(std::vector<int> cardAddresses) {
     //affect cards at the front
     std::sort(cardAddresses.begin(), cardAddresses.end(), std::greater<int>());
     for (int ob : cardAddresses) {
-      hand->removeCard(ob-1);
+      hand->removeCard(ob);
     }
   }
 }
@@ -72,7 +72,7 @@ bool PlayerModel::isValidRun(std::vector<int> cardAddresses) {
   int wildCards = 0;
   //populating the vector cardsUnderInspection
   for (int ob : cardAddresses) {
-    cardsUnderInspection.push_back(hand->getCardAt(ob-1));
+    cardsUnderInspection.push_back(hand->getCardAt(ob));
   }
   //sorting the vector by scoreValue to support further operations and put
   //wild cards at the back
@@ -91,7 +91,7 @@ bool PlayerModel::isValidRun(std::vector<int> cardAddresses) {
   }
   // counting the wildCards
   for (int i = 0; i < cardsUnderInspection.size(); i++) {
-    if (cardsUnderInspection.at(i)->isWildStatus()) {
+    if (cardsUnderInspection.at(i)->isWildStatus()){
       wildCards = wildCards + 1;
     }
   }
