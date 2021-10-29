@@ -91,7 +91,7 @@ bool PlayerModel::isValidRun(std::vector<int> cardAddresses) {
   }
   // counting the wildCards
   for (int i = 0; i < cardsUnderInspection.size(); i++) {
-    if (cardsUnderInspection.at(i)->isWildStatus()){
+    if (cardsUnderInspection.at(i)->isWildStatus()) {
       wildCards = wildCards + 1;
     }
   }
