@@ -94,7 +94,7 @@ void FiveCrownsController::playRound(int roundNumber) {
   dealCards(roundNumber);
   discardPile->addCard(deck->getTopCard());
   currentView->displayCard(discardPile->getTopCard());
-  deck->removeCard(deck->getSize());
+  deck->removeCard(deck->getSize()-1);
   // turn loop
   while (Players.at(0)->getHand()->getSize() >= 1 && \
   Players.at(1)->getHand()->getSize() >= 1) {
@@ -152,6 +152,7 @@ void FiveCrownsController::playRound(int roundNumber) {
     }
     //Discarding a card from AIPlayer
     discardPile->addCard(Players.at(1)->getHand()->getCardAt(1));
+    std::cout << "AI player: " << std::endl;
     currentView->displayCard(discardPile->getTopCard());
     Players.at(1)->discard(1);
   }
@@ -165,7 +166,7 @@ void FiveCrownsController::playRound(int roundNumber) {
 void FiveCrownsController::calcScore() {
   int pScore = 0;
   int cScore = 0;
-  for (int i = 1; i <= (Players.at(0)->getHand()->getSize()); i++) {
+  for (int i = 0; i < (Players.at(0)->getHand()->getSize()); i++) {
     pScore = pScore + (Players.at(0)->getHand()->getCardAt(i)->getScoreValue());
   }
   Players.at(0)->addScore(pScore);

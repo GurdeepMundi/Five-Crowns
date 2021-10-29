@@ -143,7 +143,7 @@ int InterfaceUI::askDraw() {
 
 void InterfaceUI::showHand(DeckModel* h) {
   std::cout << std::endl << "Your hand looks like this: " << std::endl;
-  for (int i = 1; i <= h->getSize(); i++) {
+  for (int i = 0; i < h->getSize(); i++) {
     std::cout << i << " ";
     switch (h->getCardAt(i)->getRank()) {
       case 11: std::cout << "Jack";
