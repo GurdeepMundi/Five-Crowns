@@ -1,6 +1,6 @@
 /*
 * CPSC 3720 Fall 2021
-* Sahil Devnani, Gurdeep Singh, Muhammad Saleh <sahil.devnani@Uleth.ca>
+* Sahil Devnani, Gurdeep Singh, Muhammad Saleh
 * File:InterfaceUI.h
 * Date Created: 16/10/2021
 */
