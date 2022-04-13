@@ -36,4 +36,4 @@ Names of all the classes have been suffixed with Model, View and Controller to i
 │   ├── PlayerModel.cpp
 │   ├── UserModel.cpp
 │   └── main.cpp
-└── test ```
+└── test
